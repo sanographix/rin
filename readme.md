@@ -1,11 +1,12 @@
-# Basic HTML/CSS/JS Template
+# Basic HTML/CSS/JS template
 
-[@sanographix](http://twitter.com/sanographix)が使っているHTML5の初期テンプレートです。[HTML5 Boilerplate](http://html5boilerplate.com)とかを参考にしました。
+[@sanographix](http://twitter.com/sanographix)が使っているHTML5の初期テンプレートです。
+
+なにかありましたら[@sanographix](http://twitter.com/sanographix)まで。
 
 # Quick start
 
-[ここからダウンロード](https://github.com/sanographix/sanographix.net)してください。
-
+[ここからダウンロード](https://github.com/sanographix/html-template/zipball/master)してください。
 
 # CSS
 
@@ -29,7 +30,7 @@ LESSで書いています。コンパイラは[LESS.app](http://incident57.com/l
 
 使えるクラスは以下の通りです。
 
-## Box Properties
+## Box properties
 
 | class | Mixin |
 |-------|-----|
@@ -51,7 +52,7 @@ LESSで書いています。コンパイラは[LESS.app](http://incident57.com/l
 |.ellipsis;|text-overflow: ellipsis;|
   
 
-## Text Properties
+## Text properties
 
 | class | Mixin |
 |-------|-----|
@@ -67,7 +68,7 @@ LESSで書いています。コンパイラは[LESS.app](http://incident57.com/l
 |.font-default;|font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;|
 
 
-## List Properties
+## List properties
 
 | class | Mixin |
 |-------|-----|
@@ -77,7 +78,7 @@ LESSで書いています。コンパイラは[LESS.app](http://incident57.com/l
   
   
   
-## CSS3 Properties
+## CSS3 properties
 
 各クラスにはベンダープレフィックスも含まれています
 
