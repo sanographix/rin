@@ -98,3 +98,14 @@ LESSで書いています。コンパイラは[LESS.app](http://incident57.com/l
 |.scale(@ratio);|.transform:scale(@ratio);|
 |.translate(@x,@y);|.translate(@x, @y);|
 
+
+## License
+
+### Major components:
+
+* jQuery: MIT/GPL license
+* jQuery Easing: BSD license
+* Modernizr: MIT/BSD license
+* Normalize.css: Public Domain
+* Retina.js: MIT license
+* html5shiv: MIT/GPL license
