@@ -49,8 +49,6 @@ style.lessだけをコンパイルすれば良いです。
 |.absolute;|position: absolute;|
 |.static;|position: static;|
 |.fixed;|position: fixed;|
-|.margin0;|margin: 0;|
-|.padding0;|padding: 0;|
 |.ellipsis;|text-overflow: ellipsis;|
   
 
