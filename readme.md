@@ -12,6 +12,8 @@
 
 LESSで書いています。コンパイラは[LESS.app](http://incident57.com/less/)か[Less Parser](http://www.proving-ground.be/less/)が良いと思います。
 
+style.lessだけをコンパイルすれば良いです。
+
 ## _mixin.less
 
 便利なmixinセットです。
