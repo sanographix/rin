@@ -1,3 +1,7 @@
+![](https://raw.github.com/sanographix/html-template/master/raw/template-logo.jpg)
+  
+  
+    
 # Basic HTML/CSS/JS template
 
 [@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているHTML5の初期テンプレートです。
