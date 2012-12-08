@@ -84,7 +84,6 @@ style.lessだけをコンパイルすれば良いです。
 
 * jQuery: MIT/GPL license
 * jQuery Easing: BSD license
-* Modernizr: MIT/BSD license
 * Normalize.css: Public Domain
 * Retina.js: MIT license
 * html5shiv: MIT/GPL license
