@@ -1,6 +1,6 @@
 # Basic HTML/CSS/JS template
 
-[@sanographix](http://twitter.com/sanographix)が使っているHTML5の初期テンプレートです。
+[@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているHTML5の初期テンプレートです。
 
 なにかありましたら[@sanographix](http://twitter.com/sanographix)まで。
 
@@ -36,45 +36,10 @@ style.lessだけをコンパイルすれば良いです。
 
 | class | Mixin |
 |-------|-----|
-|.center;|text-align: center;<br/>margin: 0 auto;|
-|.left;|float: left;|
-|.right;|float: right;|
-|.nofloat;|float: none;|
 |.clear;|clear: both;|
-|clearfix|clearfix（http://norisfactory.com/stylesheetlab/000038.php）にあるやつ|
-|.block;|display: block;|
-|.inline;|display: inline;|
-|.inline-block;|display: inline-block;|
-|.relative;|position: relative;|
-|.absolute;|position: absolute;|
-|.static;|position: static;|
-|.fixed;|position: fixed;|
+|.clearfix|clearfix|
 |.ellipsis;|text-overflow: ellipsis;|
   
-
-## Text properties
-
-| class | Mixin |
-|-------|-----|
-|.bold;|font-weight: bold;|
-|.normal;|font-style: normal;<br/>font-weight: normal;|
-|.thin;|font-weight: 300;|
-|.italic;|font-style: italic;|
-|.underline;|text-decoration: underline;|
-|.nodeco;|text-decoration: none;|
-|.textleft;|text-align: left;|
-|.textright;|text-align: right;|
-|.letter(@spacing);|letter-spacing: @spacing;|
-|.font-default;|font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;|
-
-
-## List properties
-
-| class | Mixin |
-|-------|-----|
-|.nolist;|list-style-type: none;|
-|.disc;|list-style-type: disc;|
-|.circle;|list-style-type: circle;|
   
   
   
@@ -99,6 +64,16 @@ style.lessだけをコンパイルすれば良いです。
 |.translate(@x,@y);|.translate(@x, @y);|
 
 
+## Changelog
+
+### 0.2 (December 08, 2012)
+
+* あまり一般的でないオレオレmixinをやめた
+    * 他の人がCSS読めなくなるので
+* 960 Grid system追加
+* _media-queries.lessにRetina用の記述欄を追加
+
+
 ## License
 
 ### Major components:
@@ -109,3 +84,4 @@ style.lessだけをコンパイルすれば良いです。
 * Normalize.css: Public Domain
 * Retina.js: MIT license
 * html5shiv: MIT/GPL license
+* 960 Grid System: MIT/GPL license
