@@ -18,6 +18,7 @@ LESSで書いています。コンパイラは[LESS.app](http://incident57.com/l
 
 style.lessだけをコンパイルすれば良いです。
 
+
 ## _mixin.less
 
 便利なmixinセットです。
@@ -36,7 +37,7 @@ style.lessだけをコンパイルすれば良いです。
 
 使えるクラスは以下の通りです。
 
-## Box properties
+### Box properties
 
 | class | Mixin |
 |-------|-----|
@@ -45,9 +46,7 @@ style.lessだけをコンパイルすれば良いです。
 |.ellipsis;|text-overflow: ellipsis;|
   
   
-  
-  
-## CSS3 properties
+### CSS3 properties
 
 各クラスにはベンダープレフィックスも含まれています
 
@@ -67,14 +66,29 @@ style.lessだけをコンパイルすれば良いです。
 |.scale(@ratio);|.transform:scale(@ratio);|
 |.translate(@x,@y);|.translate(@x, @y);|
 
+  
+## _bootstrap.less
 
-## Changelog
+[Twitter Boostrap](http://twitter.github.com/bootstrap/)です。
+
+## _font-awesome.less
+
+[Font Awesome](http://fortawesome.github.com/Font-Awesome/)です。
+
+
+# Changelog
+
+### 0.3 (December 23, 2012)
+
+* Twitter Bootstrapを追加
+* Font Awesomeを追加
+* デフォルトフォントをOpen Sansに変更
+* index.htmlに適当なテンプレートを書いておく
 
 ### 0.2 (December 08, 2012)
 
 * あまり一般的でないオレオレmixinをやめた
     * 他の人がCSS読めなくなるので
-* 960 Grid system追加
 * _media-queries.lessにRetina用の記述欄を追加
 
 
@@ -87,4 +101,5 @@ style.lessだけをコンパイルすれば良いです。
 * Normalize.css: Public Domain
 * Retina.js: MIT license
 * html5shiv: MIT/GPL license
-* 960 Grid System: MIT/GPL license
+* Twitter Bootstrap: Apache License v2.0
+* Font Awesome: CC BY 3.0

@@ -1,13 +1,61 @@
+/*
+    Main CSS
+*/
+
 @import "_normalize.less";
 @import "_mixin.less";
 @import "_variable.less";
-@import "_960.less";
+@import "_font.less";
+@import "_bootstrap.less";
+@import "_bootstrap-responsive.less";
+@import "_font-awesome.less";
 
-/*  Primary Styles
-   Author:
-*/
 
 
+/* Primary Styles */
+
+// Common
+
+html,
+body {
+    font-family: 'Open Sans', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background: @bg;
+    color: @base;
+}
+
+a {
+    color: @link;
+
+    &:hover {
+        color: @hover; 
+    }
+
+}
+
+::selection {
+    background: @selection;
+    color:#fff;
+}
+
+::-moz-selection {
+    background: @selection;
+    color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    a,a:hover {
+        color: @base;
+        text-decoration: none;
+    }
+}
+
+// Footer
+
+#footer {
+    background: @bg-footer;
+    color: @footer;
+    padding: 30px 0;
+}
 
 /* End Primary Styles */
 
