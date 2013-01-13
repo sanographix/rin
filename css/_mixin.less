@@ -92,6 +92,13 @@ LESS Mixins
     filter: alpha(opacity=@opacity);
 }
 
+.border-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .transition(@duration:0.2s, @ease:ease-out) {
     -webkit-transition: all @duration @ease;
     -moz-transition: all @duration @ease;
