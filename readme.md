@@ -107,12 +107,13 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 
 # Changelog
 
-### 0.4 (August 07, 2013)
+### 1.0 (August 07, 2013)
 
-* Twitter Bootstrapを削除
-* Font Awesomeを削除
-* CSSを軽く
-* OGPの整理
+* より汎用的に使えるよう大幅に変更
+	* Twitter Bootstrapを削除
+	* Font Awesomeを削除
+	* retina.jsを削除
+* OGPの整理と追加
 * index.html にサンプルの文言を書かない
 
 ### 0.3 (December 23, 2012)
