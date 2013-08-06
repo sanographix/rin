@@ -1,7 +1,3 @@
-![](https://raw.github.com/sanographix/html-template/master/raw/template-logo.jpg)
-  
-  
-    
 # Basic HTML/CSS/JS template
 
 [@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているHTML5の初期テンプレートです。
@@ -14,16 +10,28 @@
 
 # CSS
 
-LESSで書いています。コンパイラは[LESS.app](http://incident57.com/less/)か[Less Parser](http://www.proving-ground.be/less/)が良いと思います。
+LESSで書いています。style.lessだけをコンパイルすれば良いです。
 
-style.lessだけをコンパイルすれば良いです。
+構成は下記のとおりです。
+
+	style.less
+	┣ _normalize.less
+	┣ _mixin.less
+	┣ _variable.less
+	┗ _media-queries.less
+	fuck-ie.css（IEにだけ適用したいスタイルはここに書く）
+
+## _normalize.less
+
+
+[normalize.css](http://necolas.github.io/normalize.css/) です。
 
 
 ## _mixin.less
 
 便利なmixinセットです。
 
-また、classの(@foo, @bar)に適当な値を入れるとmixinの対応する変数に出力されます。例えばbox-shadowだったら
+classの(@foo, @bar)に適当な値を入れるとmixinの対応する変数に出力されます。例えばbox-shadowだったら
 
 	.box-shadow(0px,5px,10px,#000);
 
@@ -37,18 +45,17 @@ style.lessだけをコンパイルすれば良いです。
 
 使えるクラスは以下の通りです。
 
-### Box properties
+### よく使うの
 
 | class | Mixin |
 |-------|-----|
 |.clear;|clear: both;|
-|.clearfix|clearfix|
-|.ellipsis;|text-overflow: ellipsis;|
+|.clearfix|clearfixします|
+|.inline-block|`inline-block`のIE7対応版です|
+|.replace|テキストを画像置換するときにこれを呼び出すと便利です|
   
   
-### CSS3 properties
-
-各クラスにはベンダープレフィックスも含まれています
+### ベンダープレフィックスついてる系の
 
 | class | Mixin |
 |-------|-----|
@@ -59,22 +66,44 @@ style.lessだけをコンパイルすれば良いです。
 |.border-radius(@radius);| border-radius: @radius; |
 |.gradient(@color,@start,@stop);| background-color: @color;<br/>background: linear-gradient(top, @start, @stop);|
 |.opacity(@opacity);|opacity: @opacity;|
-|.ms-opacity(@opacity);|filter: alpha(opacity=@opacity);|
+|.ellipsis;|text-overflow: ellipsis;|
 |.transition(@duration, @ease);|    transition: all @duration @ease;|
 |.transition-duration(@duration);|transition-duration: @duration;|
 |.rotation(@deg);|transform: rotate(@deg);|
 |.scale(@ratio);|.transform:scale(@ratio);|
 |.translate(@x,@y);|.translate(@x, @y);|
 
+
+## _variable.less
   
-## _bootstrap.less
+サイトで使う色はここに書いておいて、変数から呼び出すと便利です。使い方はこんな感じ。
 
-[Twitter Boostrap](http://twitter.github.com/bootstrap/)です。
 
-## _font-awesome.less
+	body {
+	    background: @bg;
+	    color: @base;
+	}
 
-[Font Awesome](http://fortawesome.github.com/Font-Awesome/)です。
+	a {
+	    color: @link;
+	    border-color: @border;	
+	    &:hover {
+	        color: @hover;
+	    }
+	}
 
+
+## _media-queries.less
+  
+メディアクエリです。Retina ディスプレイ用のスタイルを書く欄と、レスポンシブデザイン用のスタイルを書く欄があります。
+
+Retina ディスプレイ用のスタイルは下記の 3 パターンに出し分けできます。
+
+* Retina ディスプレイ用
+	* Retina のデバイス全部に出す
+	* Retina かつ iPad 以上のブラウザ幅のとき出す
+	* Retina かつ PC で見てるときだけ出す
+   
 
 # Changelog
 
