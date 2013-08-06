@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>HTML-template by sanographix</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>HTML-template</h1>
+        <h2>HTML5の初期テンプレートです</h2>
+        <a href="https://github.com/sanographix/html-template" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="basic-htmlcssjs-template" class="anchor" href="#basic-htmlcssjs-template"><span class="octicon octicon-link"></span></a>Basic HTML/CSS/JS template</h1>
+
+<p><a href="http://twitter.com/sanographix">@sanographix</a>がウェブサイト制作時に使っているHTML5の初期テンプレートです。</p>
+
+<p>なにかありましたら<a href="http://twitter.com/sanographix">@sanographix</a>まで。</p>
+
+<h1>
+<a name="quick-start" class="anchor" href="#quick-start"><span class="octicon octicon-link"></span></a>Quick start</h1>
+
+<p><a href="https://github.com/sanographix/html-template/zipball/master">ここからダウンロード</a>してください。</p>
+
+<h1>
+<a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h1>
+
+<p>LESSで書いています。style.lessだけをコンパイルすれば良いです。</p>
+
+<p>構成は下記のとおりです。</p>
+
+<pre><code>style.less
+┣ _normalize.less
+┣ _mixin.less
+┣ _variable.less
+┗ _media-queries.less
+fuck-ie.css（IEにだけ適用したいスタイルはここに書く）
+</code></pre>
+
+<h2>
+<a name="_normalizeless" class="anchor" href="#_normalizeless"><span class="octicon octicon-link"></span></a>_normalize.less</h2>
+
+<p><a href="http://necolas.github.io/normalize.css/">normalize.css</a> です。</p>
+
+<h2>
+<a name="_mixinless" class="anchor" href="#_mixinless"><span class="octicon octicon-link"></span></a>_mixin.less</h2>
+
+<p>便利なmixinセットです。</p>
+
+<p>classの(<a href="https://github.com/foo" class="user-mention">@foo</a>, <a href="https://github.com/bar" class="user-mention">@bar</a>)に適当な値を入れるとmixinの対応する変数に出力されます。例えばbox-shadowだったら</p>
+
+<pre><code>.box-shadow(0px,5px,10px,#000);
+</code></pre>
+
+<p>と書くと</p>
+
+<pre><code>-moz-box-shadow: 0px 5px 10px #000;
+-webkit-box-shadow: 0px 5px 10px #000;
+box-shadow: 0px 5px 10px #000;
+</code></pre>
+
+<p>になります。</p>
+
+<p>使えるクラスは以下の通りです。</p>
+
+<h3>
+<a name="%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%81%AE" class="anchor" href="#%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%81%AE"><span class="octicon octicon-link"></span></a>よく使うの</h3>
+
+<table>
+<thead><tr>
+<th>class</th>
+<th>Mixin</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>.clear;</td>
+<td>clear: both;</td>
+</tr>
+<tr>
+<td>.clearfix</td>
+<td>clearfixします</td>
+</tr>
+<tr>
+<td>.inline-block</td>
+<td>
+<code>inline-block</code>のIE7対応版です</td>
+</tr>
+<tr>
+<td>.replace</td>
+<td>テキストを画像置換するときにこれを呼び出すと便利です</td>
+</tr>
+</tbody>
+</table><h3>
+<a name="%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC%E3%83%97%E3%83%AC%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9%E3%81%A4%E3%81%84%E3%81%A6%E3%82%8B%E7%B3%BB%E3%81%AE" class="anchor" href="#%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC%E3%83%97%E3%83%AC%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9%E3%81%A4%E3%81%84%E3%81%A6%E3%82%8B%E7%B3%BB%E3%81%AE"><span class="octicon octicon-link"></span></a>ベンダープレフィックスついてる系の</h3>
+
+<table>
+<thead><tr>
+<th>class</th>
+<th>Mixin</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>.box-shadow(<a href="https://github.com/x" class="user-mention">@x</a> <a href="https://github.com/y" class="user-mention">@y</a> <a href="https://github.com/blur" class="user-mention">@blur</a> <a href="https://github.com/color" class="user-mention">@color</a>);</td>
+<td>box-shadow: <a href="https://github.com/x" class="user-mention">@x</a> <a href="https://github.com/y" class="user-mention">@y</a> <a href="https://github.com/blur" class="user-mention">@blur</a> <a href="https://github.com/color" class="user-mention">@color</a>;</td>
+</tr>
+<tr>
+<td>.box-shadow-inset(@x @y @blur @color);</td>
+<td>box-shadow: inset @x @y @blur @color;</td>
+</tr>
+<tr>
+<td>.text-shadow(@x @y @blur @color);</td>
+<td>text-shadow: @x @y @blur @color;</td>
+</tr>
+<tr>
+<td>.border-radius(@topright, @bottomright, @bottomleft, @topleft);</td>
+<td>border-top-right-radius: @topright;<br>border-bottom-right-radius: @bottomright;<br>border-bottom-left-radius: @bottomleft;<br>border-top-left-radius: @topleft;</td>
+</tr>
+<tr>
+<td>.border-radius(@radius);</td>
+<td>border-radius: @radius;</td>
+</tr>
+<tr>
+<td>.gradient(@color,@start,@stop);</td>
+<td>background-color: @color;<br>background: linear-gradient(top, @start, @stop);</td>
+</tr>
+<tr>
+<td>.opacity(@opacity);</td>
+<td>opacity: @opacity;</td>
+</tr>
+<tr>
+<td>.ellipsis;</td>
+<td>text-overflow: ellipsis;</td>
+</tr>
+<tr>
+<td>.transition(@duration, @ease);</td>
+<td>transition: all @duration @ease;</td>
+</tr>
+<tr>
+<td>.transition-duration(@duration);</td>
+<td>transition-duration: @duration;</td>
+</tr>
+<tr>
+<td>.rotation(@deg);</td>
+<td>transform: rotate(@deg);</td>
+</tr>
+<tr>
+<td>.scale(@ratio);</td>
+<td>.transform:scale(@ratio);</td>
+</tr>
+<tr>
+<td>.translate(@x,@y);</td>
+<td>.translate(@x, @y);</td>
+</tr>
+</tbody>
+</table><h2>
+<a name="_variableless" class="anchor" href="#_variableless"><span class="octicon octicon-link"></span></a>_variable.less</h2>
+
+<p>サイトで使う色はここに書いておいて、変数から呼び出すと便利です。使い方はこんな感じ。</p>
+
+<pre><code>body {
+    background: @bg;
+    color: @base;
+}
+
+a {
+    color: @link;
+    border-color: @border;  
+    &amp;:hover {
+        color: @hover;
+    }
+}
+</code></pre>
+
+<h2>
+<a name="_media-queriesless" class="anchor" href="#_media-queriesless"><span class="octicon octicon-link"></span></a>_media-queries.less</h2>
+
+<p>メディアクエリです。Retina ディスプレイ用のスタイルを書く欄と、レスポンシブデザイン用のスタイルを書く欄があります。</p>
+
+<p>Retina ディスプレイ用のスタイルは下記の 3 パターンに出し分けできます。</p>
+
+<ul>
+<li>Retina ディスプレイ用
+
+<ul>
+<li>Retina のデバイス全部に出す</li>
+<li>Retina かつ iPad 以上のブラウザ幅のとき出す</li>
+<li>Retina かつ PC で見てるときだけ出す</li>
+</ul>
+</li>
+</ul><h1>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h1>
+
+<h3>
+<a name="04-august-07-2013" class="anchor" href="#04-august-07-2013"><span class="octicon octicon-link"></span></a>0.4 (August 07, 2013)</h3>
+
+<ul>
+<li>Twitter Bootstrapを削除</li>
+<li>Font Awesomeを削除</li>
+<li>CSSを軽く</li>
+<li>OGPの整理</li>
+<li>index.html にサンプルの文言を書かない</li>
+</ul><h3>
+<a name="03-december-23-2012" class="anchor" href="#03-december-23-2012"><span class="octicon octicon-link"></span></a>0.3 (December 23, 2012)</h3>
+
+<ul>
+<li>Twitter Bootstrapを追加</li>
+<li>Font Awesomeを追加</li>
+<li>デフォルトフォントをOpen Sansに変更</li>
+<li>index.htmlに適当なテンプレートを書いておく</li>
+</ul><h3>
+<a name="02-december-08-2012" class="anchor" href="#02-december-08-2012"><span class="octicon octicon-link"></span></a>0.2 (December 08, 2012)</h3>
+
+<ul>
+<li>あまり一般的でないオレオレmixinをやめた
+
+<ul>
+<li>他の人がCSS読めなくなるので</li>
+</ul>
+</li>
+<li>_media-queries.lessにRetina用の記述欄を追加</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<h3>
+<a name="major-components" class="anchor" href="#major-components"><span class="octicon octicon-link"></span></a>Major components:</h3>
+
+<ul>
+<li>jQuery: MIT/GPL license</li>
+<li>jQuery Easing: BSD license</li>
+<li>Normalize.css: Public Domain</li>
+<li>html5shiv: MIT/GPL license</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/sanographix/html-template/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/sanographix/html-template/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/sanographix/html-template"></a> is maintained by <a href="https://github.com/sanographix">sanographix</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-36621684-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
