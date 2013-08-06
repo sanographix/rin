@@ -2,36 +2,45 @@
 LESS Mixins
 */
 
-/* box properties */
+/* clear */
+
+.clear {
+    clear: both;
+}
 
 .clearfix {
     display: block;
     *zoom: 1;
-  	&:after {
+    &:after {
         display: block;
         visibility: hidden;
         font-size: 0;
         height: 0;
         clear: both;
         content: ".";
-  	}
+    }
 }
+
+/* inline-block（IE対応版） */
 
 .inline-block {
     display: inline-block;
-    *display: inline;  
-    *zoom: 1;  
+    *display: inline;
+    *zoom: 1;
 }
 
-.ellipsis {
+/* テキストを画像で置換するときにこの mixin を呼び出すと便利 */
+
+.replace {
+    display: block;
+    text-indent: 100%;
     white-space: nowrap;
-    -webkit-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
     overflow: hidden;
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
 
-/* CSS3 properties */
+/* ベンダープレフィックスついてる系の */
 
 .box-shadow (@x: 0, @y: 0, @blur: 25px, @color: rgba(0,0,0,.20)) {
     -moz-box-shadow: @x @y @blur @color;
@@ -64,14 +73,14 @@ LESS Mixins
     border-bottom-right-radius: @bottomright;
     border-bottom-left-radius: @bottomleft;
     border-top-left-radius: @topleft;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
 .border-radius(@radius: 5px) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
     border-radius: @radius;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
 .gradient(@color: #F5F5F5, @start: #FFFFFF, @stop: #EEEEEE) {
@@ -88,15 +97,19 @@ LESS Mixins
     opacity: @opacity;
 }
 
-.ms-opacity(@opacity: 25) {
-    filter: alpha(opacity=@opacity);
-}
-
 .border-box {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .transition(@duration:0.2s, @ease:ease-out) {

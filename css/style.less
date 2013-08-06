@@ -5,20 +5,14 @@
 @import "_normalize.less";
 @import "_mixin.less";
 @import "_variable.less";
-@import "_font.less";
-@import "_bootstrap.less";
-@import "_bootstrap-responsive.less";
-@import "_font-awesome.less";
 
-
-
-/* Primary Styles */
+/* Common Styles */
 
 // Common
 
 html,
 body {
-    font-family: 'Open Sans', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     background: @bg;
     color: @base;
 }
@@ -27,16 +21,12 @@ a {
     color: @link;
 
     &:hover {
-        color: @hover; 
+        color: @hover;
     }
 
 }
 
-::selection {
-    background: @selection;
-    color:#fff;
-}
-
+::selection,
 ::-moz-selection {
     background: @selection;
     color:#fff;
@@ -49,15 +39,46 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-// Footer
+// ボタン
 
-#footer {
-    background: @bg-footer;
-    color: @footer;
-    padding: 30px 0;
+.btn {
+    .inline-block;
+    text-align: center;
+    padding: 5px 15px 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    .border-radius(3px);
+    overflow: hidden;
+    color: @base;
+    background-color: @btn;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,.15);
+    &:hover {
+        .gradient(#fff,#fff,@btn-hover);
+        color: @base;
+        text-decoration: none;
+        border: 1px solid rgba(0,0,0,.2);
+    }
 }
 
-/* End Primary Styles */
+.btn-primary {
+    background-color: @btn-primary;
+    color: #fff;
+    border: 1px solid @btn-primary;
+    &:hover {
+        .gradient(@btn-primary,@btn-primary,@btn-primary-hover);
+        color: #fff;
+        border: 1px solid @btn-primary-hover;
+    }
+}
+
+.btn-large {
+    padding: 8px 25px;
+    font-size: 150%;
+    box-sizing: border-box;
+}
+
+/* End Common Styles */
 
 @import "_media-queries.less";
-@import "_retina.less";

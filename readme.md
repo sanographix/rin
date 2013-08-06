@@ -78,6 +78,14 @@ style.lessだけをコンパイルすれば良いです。
 
 # Changelog
 
+### 0.4 (August 07, 2013)
+
+* Twitter Bootstrapを削除
+* Font Awesomeを削除
+* CSSを軽く
+* OGPの整理
+* index.html にサンプルの文言を書かない
+
 ### 0.3 (December 23, 2012)
 
 * Twitter Bootstrapを追加
