@@ -136,7 +136,4 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 * jQuery: MIT/GPL license
 * jQuery Easing: BSD license
 * Normalize.css: Public Domain
-* Retina.js: MIT license
 * html5shiv: MIT/GPL license
-* Twitter Bootstrap: Apache License v2.0
-* Font Awesome: CC BY 3.0
