@@ -516,10 +516,10 @@ body {
   color: #333333;
 }
 a {
-  color: #e42375;
+  color: #37aed5;
 }
 a:hover {
-  color: #cf0f61;
+  color: #036fa1;
 }
 ::selection,
 ::-moz-selection {
@@ -584,17 +584,17 @@ h6 a:hover {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .btn-primary {
-  background-color: #e42375;
+  background-color: #37aed5;
   color: #fff;
-  border: 1px solid #e42375;
+  border: 1px solid #37aed5;
 }
 .btn-primary:hover {
-  background: #e42375;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e42375), to(#cf0f61));
-  background: -ms-linear-gradient(top, #e42375, #cf0f61);
-  background: -moz-linear-gradient(top, #e42375 0%, #cf0f61 100%);
+  background: #37aed5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#37aed5), to(#036fa1));
+  background: -ms-linear-gradient(top, #37aed5, #036fa1);
+  background: -moz-linear-gradient(top, #37aed5 0%, #036fa1 100%);
   color: #fff;
-  border: 1px solid #cf0f61;
+  border: 1px solid #036fa1;
 }
 .btn-large {
   padding: 8px 25px;
