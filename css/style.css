@@ -4696,6 +4696,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "museo-sans", 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   color: #ffffff;
   font-weight: 100;
 }
