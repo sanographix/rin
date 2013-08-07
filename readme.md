@@ -1,14 +1,12 @@
 # Rin
 
-## Basic HTML5 / CSS3 Template
+## A Lean, Basic HTML5 and CSS3 Template
 
 [@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているHTML5の初期テンプレートです。
 
-なにかありましたら[@sanographix](http://twitter.com/sanographix)まで。
-
 # Quick start
 
-[ここからダウンロード](https://github.com/sanographix/html-template/zipball/master)してください。
+[ここからダウンロード](https://github.com/sanographix/rin-html-template/archive/master.zip)してください。
 
 # CSS
 
