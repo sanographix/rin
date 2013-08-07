@@ -4815,7 +4815,16 @@ h6 a:hover {
 
 --------------------------------------------------------------*/
 @media (max-width: 767px) {
-  
+  #header {
+    text-align: center;
+    padding: 3em 0 3em;
+  }
+  #header h1 {
+    font-size: 80px;
+  }
+  #header h2 {
+    font-size: 20px;
+  }
 }
 /*--------------------------------------------------------------
 
