@@ -1,4 +1,6 @@
-# Basic HTML/CSS/JS template
+# Rin
+
+## Basic HTML5 / CSS3 Template
 
 [@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているHTML5の初期テンプレートです。
 
