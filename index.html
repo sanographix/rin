@@ -1,283 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="HTML-template : HTML5の初期テンプレートです" />
+  <meta charset="utf-8">
+  <title>Rin - A Lean, Basic HTML5 and CSS3 Template by sanographix</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <meta name="description" content="Rin is a Lean, Basic HTML5 and CSS3 Template" />
+  <meta name="keywords" content="html template" />
+  <meta name="viewport" content="width=device-width">
 
-    <title>HTML-template</title>
-  </head>
+  <meta property="og:title" content="Rin - A Lean, Basic HTML5 and CSS3 Template by sanographix" />
+  <meta property="og:description" content="Rin is a Lean, Basic HTML5 and CSS3 Template" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://sanographix.github.io/rin-html-template/" />
+  <meta property="og:image" content="http://sanographix.github.io/rin-html-template/og-image.gif" />
+  <meta property="og:site_name" content="Rin - A Lean, Basic HTML5 and CSS3 Template by sanographix" />
 
-  <body>
+  <meta property="fb:app_id" content="115143821929167" />
+  <meta property="article:publisher" content="https://www.facebook.com/sanographix.net" />
+  <meta name="twitter:site" content="@sanographix">
+  <link rel="author" href="https://plus.google.com/109963703491503474788" />
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/sanographix/rin-html-template">View on GitHub</a>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="canonical" href="http://sanographix.github.io/rin-html-template/" />
 
-          <h1 id="project_title">HTML-template</h1>
-          <h2 id="project_tagline">HTML5の初期テンプレートです</h2>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/sanographix/rin-html-template/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/sanographix/rin-html-template/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+  <!--[if IE]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/fuck-ie.css" />
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36621684-1']); //Change UA-XXXXXXXX-X to your site's ID
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- END Google Analytics -->
+
+</head>
+<body>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- END Facebook SDK -->
+
+  <header id="header">
+    <div class="container">
+      <h1>Rin</h1>
+      <h2>A Lean, Basic HTML5 and CSS3 Template</h2>
+      <p>
+        <i class="icon-github"></i>
+        <a href="https://github.com/sanographix/rin-html-template">GitHub Project</a>
+        &nbsp;&nbsp;·&nbsp;&nbsp;
+        Created &amp; Maintained by
+        <a href="http://www.sanographix.net">@sanographix</a>
+      </p>
+      <div class="button-wrapper">
+        <a href="https://github.com/sanographix/rin-html-template/archive/master.zip" class="btn btn-primary btn-lg">Donwload Rin</a>
+      </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="basic-htmlcssjs-template" class="anchor" href="#basic-htmlcssjs-template"><span class="octicon octicon-link"></span></a>Basic HTML/CSS/JS template</h1>
-
-<p><a href="http://twitter.com/sanographix">@sanographix</a>がウェブサイト制作時に使っているHTML5の初期テンプレートです。</p>
-
-<p>なにかありましたら<a href="http://twitter.com/sanographix">@sanographix</a>まで。</p>
-
-<h1>
-<a name="quick-start" class="anchor" href="#quick-start"><span class="octicon octicon-link"></span></a>Quick start</h1>
-
-<p><a href="https://github.com/sanographix/html-template/zipball/master">ここからダウンロード</a>してください。</p>
-
-<h1>
-<a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h1>
-
-<p>LESSで書いています。style.lessだけをコンパイルすれば良いです。</p>
-
-<p>構成は下記のとおりです。</p>
-
-<pre><code>style.less
-┣ _normalize.less
-┣ _mixin.less
-┣ _variable.less
-┗ _media-queries.less
-fuck-ie.css（IEにだけ適用したいスタイルはここに書く）
-</code></pre>
-
-<h2>
-<a name="_normalizeless" class="anchor" href="#_normalizeless"><span class="octicon octicon-link"></span></a>_normalize.less</h2>
-
-<p><a href="http://necolas.github.io/normalize.css/">normalize.css</a> です。</p>
-
-<h2>
-<a name="_mixinless" class="anchor" href="#_mixinless"><span class="octicon octicon-link"></span></a>_mixin.less</h2>
-
-<p>便利なmixinセットです。</p>
-
-<p>classの(<a href="https://github.com/foo" class="user-mention">@foo</a>, <a href="https://github.com/bar" class="user-mention">@bar</a>)に適当な値を入れるとmixinの対応する変数に出力されます。例えばbox-shadowだったら</p>
-
-<pre><code>.box-shadow(0px,5px,10px,#000);
-</code></pre>
-
-<p>と書くと</p>
-
-<pre><code>-moz-box-shadow: 0px 5px 10px #000;
--webkit-box-shadow: 0px 5px 10px #000;
-box-shadow: 0px 5px 10px #000;
-</code></pre>
-
-<p>になります。</p>
-
-<p>使えるクラスは以下の通りです。</p>
-
-<h3>
-<a name="%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%81%AE" class="anchor" href="#%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%81%AE"><span class="octicon octicon-link"></span></a>よく使うの</h3>
-
-<table>
-<thead><tr>
-<th>class</th>
-<th>Mixin</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>.clear;</td>
-<td>clear: both;</td>
-</tr>
-<tr>
-<td>.clearfix</td>
-<td>clearfixします</td>
-</tr>
-<tr>
-<td>.inline-block</td>
-<td>
-<code>inline-block</code>のIE7対応版です</td>
-</tr>
-<tr>
-<td>.replace</td>
-<td>テキストを画像置換するときにこれを呼び出すと便利です</td>
-</tr>
-</tbody>
-</table><h3>
-<a name="%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC%E3%83%97%E3%83%AC%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9%E3%81%A4%E3%81%84%E3%81%A6%E3%82%8B%E7%B3%BB%E3%81%AE" class="anchor" href="#%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC%E3%83%97%E3%83%AC%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9%E3%81%A4%E3%81%84%E3%81%A6%E3%82%8B%E7%B3%BB%E3%81%AE"><span class="octicon octicon-link"></span></a>ベンダープレフィックスついてる系の</h3>
-
-<table>
-<thead><tr>
-<th>class</th>
-<th>Mixin</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>.box-shadow(<a href="https://github.com/x" class="user-mention">@x</a> <a href="https://github.com/y" class="user-mention">@y</a> <a href="https://github.com/blur" class="user-mention">@blur</a> <a href="https://github.com/color" class="user-mention">@color</a>);</td>
-<td>box-shadow: <a href="https://github.com/x" class="user-mention">@x</a> <a href="https://github.com/y" class="user-mention">@y</a> <a href="https://github.com/blur" class="user-mention">@blur</a> <a href="https://github.com/color" class="user-mention">@color</a>;</td>
-</tr>
-<tr>
-<td>.box-shadow-inset(@x @y @blur @color);</td>
-<td>box-shadow: inset @x @y @blur @color;</td>
-</tr>
-<tr>
-<td>.text-shadow(@x @y @blur @color);</td>
-<td>text-shadow: @x @y @blur @color;</td>
-</tr>
-<tr>
-<td>.border-radius(@topright, @bottomright, @bottomleft, @topleft);</td>
-<td>border-top-right-radius: @topright;<br>border-bottom-right-radius: @bottomright;<br>border-bottom-left-radius: @bottomleft;<br>border-top-left-radius: @topleft;</td>
-</tr>
-<tr>
-<td>.border-radius(@radius);</td>
-<td>border-radius: @radius;</td>
-</tr>
-<tr>
-<td>.gradient(@color,@start,@stop);</td>
-<td>background-color: @color;<br>background: linear-gradient(top, @start, @stop);</td>
-</tr>
-<tr>
-<td>.opacity(@opacity);</td>
-<td>opacity: @opacity;</td>
-</tr>
-<tr>
-<td>.ellipsis;</td>
-<td>text-overflow: ellipsis;</td>
-</tr>
-<tr>
-<td>.transition(@duration, @ease);</td>
-<td>transition: all @duration @ease;</td>
-</tr>
-<tr>
-<td>.transition-duration(@duration);</td>
-<td>transition-duration: @duration;</td>
-</tr>
-<tr>
-<td>.rotation(@deg);</td>
-<td>transform: rotate(@deg);</td>
-</tr>
-<tr>
-<td>.scale(@ratio);</td>
-<td>.transform:scale(@ratio);</td>
-</tr>
-<tr>
-<td>.translate(@x,@y);</td>
-<td>.translate(@x, @y);</td>
-</tr>
-</tbody>
-</table><h2>
-<a name="_variableless" class="anchor" href="#_variableless"><span class="octicon octicon-link"></span></a>_variable.less</h2>
-
-<p>サイトで使う色はここに書いておいて、変数から呼び出すと便利です。使い方はこんな感じ。</p>
-
-<pre><code>body {
-    background: @bg;
-    color: @base;
-}
-
-a {
-    color: @link;
-    border-color: @border;  
-    &amp;:hover {
-        color: @hover;
-    }
-}
-</code></pre>
-
-<h2>
-<a name="_media-queriesless" class="anchor" href="#_media-queriesless"><span class="octicon octicon-link"></span></a>_media-queries.less</h2>
-
-<p>メディアクエリです。Retina ディスプレイ用のスタイルを書く欄と、レスポンシブデザイン用のスタイルを書く欄があります。</p>
-
-<p>Retina ディスプレイ用のスタイルは下記の 3 パターンに出し分けできます。</p>
-
-<ul>
-<li>Retina ディスプレイ用
-
-<ul>
-<li>Retina のデバイス全部に出す</li>
-<li>Retina かつ iPad 以上のブラウザ幅のとき出す</li>
-<li>Retina かつ PC で見てるときだけ出す</li>
-</ul>
-</li>
-</ul><h1>
-<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h1>
-
-<h3>
-<a name="10-august-07-2013" class="anchor" href="#10-august-07-2013"><span class="octicon octicon-link"></span></a>1.0 (August 07, 2013)</h3>
-
-<ul>
-<li>より汎用的に使えるよう大幅に変更
-
-<ul>
-<li>Twitter Bootstrapを削除</li>
-<li>Font Awesomeを削除</li>
-<li>retina.jsを削除</li>
-</ul>
-</li>
-<li>OGPの整理と追加</li>
-<li>index.html にサンプルの文言を書かない</li>
-</ul><h3>
-<a name="03-december-23-2012" class="anchor" href="#03-december-23-2012"><span class="octicon octicon-link"></span></a>0.3 (December 23, 2012)</h3>
-
-<ul>
-<li>Twitter Bootstrapを追加</li>
-<li>Font Awesomeを追加</li>
-<li>デフォルトフォントをOpen Sansに変更</li>
-<li>index.htmlに適当なテンプレートを書いておく</li>
-</ul><h3>
-<a name="02-december-08-2012" class="anchor" href="#02-december-08-2012"><span class="octicon octicon-link"></span></a>0.2 (December 08, 2012)</h3>
-
-<ul>
-<li>あまり一般的でないオレオレmixinをやめた
-
-<ul>
-<li>他の人がCSS読めなくなるので</li>
-</ul>
-</li>
-<li>_media-queries.lessにRetina用の記述欄を追加</li>
-</ul><h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
-
-<h3>
-<a name="major-components" class="anchor" href="#major-components"><span class="octicon octicon-link"></span></a>Major components:</h3>
-
-<ul>
-<li>jQuery: MIT/GPL license</li>
-<li>jQuery Easing: BSD license</li>
-<li>Normalize.css: Public Domain</li>
-<li>html5shiv: MIT/GPL license</li>
-</ul>
-      </section>
+  </header>
+  <div class="container intro">
+    <h2>Introducing Rin.</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <h3>Build Fast</h3>
+        <i class="icon-code icon-4x"></i>
+        <p>Rin is a lean front-end template that contains Google Analytics tracking code, Facebook JavaScript SDK, and jQuery (via Google CDN).</p>
+      </div>
+      <div class="col-lg-4">
+        <h3>LESS Boilerplate</h3>
+        <i class="icon-css3 icon-4x"></i>
+        <p>Rin builds on LESS and includes normalize, color variables, useful mixins, and retina-ready media queries.</p>
+      </div>
+      <div class="col-lg-4">
+        <h3>OGP Tags</h3>
+        <i class="icon-tags icon-4x"></i>
+        <p>Rin has valid open graph protocol tags. And also supports <code>twitter:site</code>, <code>article:publisher</code>, <code>rel="author"</code>.</p>
+      </div>
     </div>
+    <a href="https://github.com/sanographix/rin-html-template" class="btn btn-primary btn-lg">View on GitHub</a>
+  </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">HTML-template maintained by <a href="https://github.com/sanographix">sanographix</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+  <footer id="footer">
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-36621684-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <ul class="nav social-buttons">
+      <li class="social-button">
+        <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=tumblr&type=watch&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      </li>
+      <li class="social-button">
+        <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=tumblr&type=follow&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="180" height="20"></iframe>
+      </li>
+      <li class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </ul>
+    <p>
+      Copyright (c) 2013 <a href="http://www.sanographix.net" target="_blank">SANOGRAPHIX.NET</a>
+    </p>
+  </footer>
 
-
-  </body>
+</body>
 </html>
