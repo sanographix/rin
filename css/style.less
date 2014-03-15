@@ -12,7 +12,7 @@
 
 html,
 body {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
     background: @bg;
     color: @base;
 }
@@ -44,7 +44,7 @@ h1,h2,h3,h4,h5,h6 {
 .btn {
     .inline-block;
     text-align: center;
-    padding: 5px 15px 3px;
+    padding: .6em 1.2em;
     cursor: pointer;
     line-height: 1.5;
     font-size: 90%;
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: none;
     border: 1px solid rgba(0,0,0,.15);
     &:hover {
-        .gradient(#fff,#fff,@btn-hover);
+        background-color: @btn-hover;
         color: @base;
         text-decoration: none;
         border: 1px solid rgba(0,0,0,.2);
@@ -67,15 +67,16 @@ h1,h2,h3,h4,h5,h6 {
     color: #fff;
     border: 1px solid @btn-primary;
     &:hover {
-        .gradient(@btn-primary,@btn-primary,@btn-primary-hover);
+        background-color: @btn-primary-hover;
         color: #fff;
         border: 1px solid @btn-primary-hover;
     }
 }
 
 .btn-large {
-    padding: 8px 25px;
+    padding: .8em 2em;
     font-size: 150%;
+    -moz-box-sizing:border-box;
     box-sizing: border-box;
 }
 
