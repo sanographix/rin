@@ -2,22 +2,17 @@
 LESS Mixins
 */
 
-/* clear */
-
-.clear {
-    clear: both;
-}
+/* clearfix */
 
 .clearfix {
-    display: block;
     *zoom: 1;
+    &:before,
     &:after {
-        display: block;
-        visibility: hidden;
-        font-size: 0;
-        height: 0;
+        display: table;
+        content: " ";
+    }
+    &:after {
         clear: both;
-        content: ".";
     }
 }
 
