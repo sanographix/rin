@@ -8,18 +8,50 @@
 
 [ここからダウンロード](https://github.com/sanographix/rin-html-template/archive/master.zip)してください。
 
+# Grunt
+
+Gruntを使ってlessのコンパイルと画像圧縮ができます。
+
+### 1. node.jsをインストール
+
+- <http://nodejs.org/>
+
+### 2. gruntをインストール
+
+    sudo npm install -g grunt-cli
+    
+### 3. プラグインをインストール
+
+    npm install
+    
+- `package.json`に書いてあるプラグインがインストールされます
+
+### 4. gruntを起動する
+
+    grunt
+
+# Images
+
+gruntを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`dist/images`に追加します。圧縮できるファイルはgif,jpg,pngです。  
+ディレクトリ構成は下記のとおりです。
+
+	rin-html-template/
+	┣┳ images/
+	┃┗ オリジナルの画像をimages/以下に入れる
+	┗┳ dist/
+	 ┗┳ images/
+	  ┗ 圧縮済みの画像が自動的に追加される
+	 
 # CSS
 
-LESSで書いています。style.lessだけをコンパイルすれば良いです。
-
-構成は下記のとおりです。
+LESSで書いています。構成は下記のとおりです。
 
 	style.less
 	┣ _normalize.less
 	┣ _mixin.less
 	┣ _variable.less
 	┗ _media-queries.less
-	fuck-ie.css（IEにだけ適用したいスタイルはここに書く）
+
 
 ## _normalize.less
 
@@ -29,27 +61,12 @@ LESSで書いています。style.lessだけをコンパイルすれば良いで
 
 ## _mixin.less
 
-便利なmixinセットです。
-
-classの(@foo, @bar)に適当な値を入れるとmixinの対応する変数に出力されます。例えばbox-shadowだったら
-
-	.box-shadow(0px,5px,10px,#000);
-
-と書くと
-
-    -moz-box-shadow: 0px 5px 10px #000;
-    -webkit-box-shadow: 0px 5px 10px #000;
-    box-shadow: 0px 5px 10px #000;
-
-になります。
-
-使えるクラスは以下の通りです。
+便利なmixinセットです。使えるクラスは以下の通りです。
 
 ### よく使うの
 
 | class | Mixin |
 |-------|-----|
-|.clear;|clear: both;|
 |.clearfix|clearfixします|
 |.inline-block|`inline-block`のIE7対応版です|
 |.replace|テキストを画像置換するときにこれを呼び出すと便利です|
@@ -107,6 +124,14 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 
 # Changelog
 
+### 1.3.0 (Jun 25, 2014)
+
+* gruntでlessのコンパイル,画像圧縮できるようにした
+* clearfixを[Micro Clearfix](http://nicolasgallagher.com/micro-clearfix-hack/)にした
+* Google Analyticsのコードをユニバーサルアナリティクスに
+* その他不要な要素の削除
+
+
 ### 1.2.0 (Mar 15, 2014)
 
 * `.btn`をグラデーションじゃなくする
@@ -157,11 +182,11 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 * _media-queries.lessにRetina用の記述欄を追加
 
 
-## License
+# License
 
 ### Major components:
 
 * jQuery: MIT/GPL license
-* jQuery Easing: BSD license
 * Normalize.css: Public Domain
 * html5shiv: MIT/GPL license
+* grunt: MIT license
