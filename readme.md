@@ -110,6 +110,24 @@ LESSで書いています。構成は下記のとおりです。
 	}
 
 
+## _grid.less
+
+bootstrap感のあるグリッドを作れます。書き方はこんな感じです。
+
+    <div class="container">
+      <div class="row">
+        <div class="span4">
+          span4
+        </div>
+        <div class="span4">
+          span4
+        </div>
+        <div class="span4">
+          span4
+        </div>
+      </div>
+    </div>
+
 ## _media-queries.less
   
 メディアクエリです。Retina ディスプレイ用のスタイルを書く欄と、レスポンシブデザイン用のスタイルを書く欄があります。
@@ -123,6 +141,11 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
    
 
 # Changelog
+
+
+### 1.4.0 (Jul 02, 2014)
+
+* グリッドシステムっぽいの（`_grid.less`）を追加
 
 ### 1.3.0 (Jun 25, 2014)
 
