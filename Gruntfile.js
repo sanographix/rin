@@ -57,7 +57,7 @@ module.exports = function(grunt){
 
             img : {
                 files: ['<%= paths.img %>**/*.{png,jpg,gif}'],
-                tasks: ['imagemin', 'tinypng']
+                tasks: ['imagemin', 'pngmin']
             },
 
             // ラベルは"less"にしてみます
