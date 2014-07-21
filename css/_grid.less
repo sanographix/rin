@@ -11,7 +11,16 @@ grid
 .row {
     margin-left: -15px;
     margin-right: -15px;
-    .clearfix;
+    // clearfix;
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 [class*="span"] {
