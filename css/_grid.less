@@ -38,7 +38,86 @@ grid
     width: 33.33333333%;
 }
 
+.span5 {
+    width: 41.66666667%;
+}
+
 .span6 {
     width: 50%;
 }
 
+.span7 {
+    width:58.33333333%
+}
+
+.span8 {
+    width: 66.66666667%;
+}
+
+.span9 {
+
+}
+
+.span10 {
+
+}
+
+.span11 {
+
+}
+
+
+/* Media Queries - Large Display */
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1170px;
+    }
+
+}
+
+/* Media Queries - Tablet */
+
+@media (min-width: 768px) and (max-width: 1040px) {
+
+    .container {
+        width: 720px;
+    }
+
+}
+
+/* Media Queries - Small Tablet & Smartphone */
+
+@media (max-width: 767px) {
+
+    .container {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+}
+
+/* Media Queries - Smartphone */
+
+@media (max-width: 480px) {
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    [class*=span] {
+        float: none;
+        padding: 0;
+        width: auto !important;
+        margin-bottom: 1em;
+    }
+
+}
