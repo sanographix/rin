@@ -3,6 +3,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-pngmin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.initConfig({
 
@@ -70,13 +72,40 @@ module.exports = function(grunt){
                 tasks : [
                     "less:dist"
                 ]
+            },
+
+            scripts : {
+                // "files"セクションで監視するファイルの条件を指定
+                files : [
+                    "js/libs/*.js"
+                ],
+                // "tasks"セクションで実行するタスクを指定
+                tasks : [
+                    'concat', 'uglify'
+                ]
             }
 
+        },
+
+        // ファイル結合の設定
+        concat: {
+            dist: {
+                src: 'js/libs/*.js',
+                dest: 'js/scripts.js'
+            }
+        },
+
+        // ファイル圧縮の設定
+        uglify: {
+            build: {
+                src: 'js/scripts.js',
+                dest: 'js/scripts.min.js'
+            }
         }
 
     });
 
     // grunt コマンドでなにやるか指定
-    grunt.registerTask('default', ['less:dist','watch', 'imagemin', 'pngmin']);
+    grunt.registerTask('default', ['less:dist','watch', 'imagemin', 'pngmin', 'concat', 'uglify']);
 
 };
