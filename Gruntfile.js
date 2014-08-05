@@ -84,6 +84,14 @@ module.exports = function(grunt){
 
         watch : {
 
+            options: {
+                livereload: true
+            },
+
+            html: {
+                files: ['**/*.html']
+            },
+
             img : {
                 files: ['<%= paths.img %>**/*.{png,jpg,gif}'],
                 tasks: ['imagemin', 'pngmin']

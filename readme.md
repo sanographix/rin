@@ -149,6 +149,8 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 
 `grunt-contrib-connect`によってローカルサーバーを起動します。デフォルトのURLは <http://localhost:8000/> です。
 
+[LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related) に対応しています。拡張をインストールしておくと、Gruntで`watch`対象のファイルが更新されたとき自動でブラウザをリロードします。
+
 # Changelog
 
 
