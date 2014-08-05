@@ -15,7 +15,7 @@ module.exports = function(grunt){
             imgdist: 'dist/images/'
         },
 
-        // grunt-contrib-imagemin
+        // imagemin
         imagemin: {
             dynamic: {
                 files: [{
@@ -42,10 +42,9 @@ module.exports = function(grunt){
           }
         },
 
+        // less
         less : {
-            // 作業のラベルは"dist"にしてみます
             dist : {
-                // オプションの指定
                 options : {
                     compress : true
                 },
@@ -56,7 +55,7 @@ module.exports = function(grunt){
             }
         },
 
-        // ファイル結合の設定
+        // js-concat
         concat: {
             dist: {
                 src: 'js/libs/*.js',
@@ -64,7 +63,7 @@ module.exports = function(grunt){
             }
         },
 
-        // ファイル圧縮の設定
+        // js-uglify
         uglify: {
             build: {
                 src: 'js/scripts.js',
@@ -72,7 +71,7 @@ module.exports = function(grunt){
             }
         },
 
-        // grunt-contrib-connect
+        // connect
         connect: {
             server: {
                 options: {
@@ -82,46 +81,27 @@ module.exports = function(grunt){
             }
         },
 
+        // watch
         watch : {
-
             options: {
                 livereload: true
             },
-
             html: {
                 files: ['**/*.html']
             },
-
             img : {
                 files: ['<%= paths.img %>**/*.{png,jpg,gif}'],
                 tasks: ['imagemin', 'pngmin']
             },
-
-            // ラベルは"less"にしてみます
             less : {
-                // "files"セクションで監視するファイルの条件を指定
-                files : [
-                    "**/*.less"
-                ],
-                // "tasks"セクションで実行するタスクを指定
-                tasks : [
-                    "less:dist"
-                ]
+                files : ["**/*.less"],
+                tasks : ["less:dist"]
             },
-
             scripts : {
-                // "files"セクションで監視するファイルの条件を指定
-                files : [
-                    "js/libs/*.js"
-                ],
-                // "tasks"セクションで実行するタスクを指定
-                tasks : [
-                    'concat', 'uglify'
-                ]
+                files : ["js/libs/*.js"],
+                tasks : ['concat', 'uglify']
             }
-
         }
-
     });
 
     // grunt コマンドでなにやるか指定
