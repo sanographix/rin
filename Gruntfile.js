@@ -5,6 +5,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-pngmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.initConfig({
 
@@ -55,6 +56,32 @@ module.exports = function(grunt){
             }
         },
 
+        // ファイル結合の設定
+        concat: {
+            dist: {
+                src: 'js/libs/*.js',
+                dest: 'js/scripts.js'
+            }
+        },
+
+        // ファイル圧縮の設定
+        uglify: {
+            build: {
+                src: 'js/scripts.js',
+                dest: 'js/scripts.min.js'
+            }
+        },
+
+        // grunt-contrib-connect
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    hostname: 'localhost'
+                }
+            }
+        },
+
         watch : {
 
             img : {
@@ -85,27 +112,11 @@ module.exports = function(grunt){
                 ]
             }
 
-        },
-
-        // ファイル結合の設定
-        concat: {
-            dist: {
-                src: 'js/libs/*.js',
-                dest: 'js/scripts.js'
-            }
-        },
-
-        // ファイル圧縮の設定
-        uglify: {
-            build: {
-                src: 'js/scripts.js',
-                dest: 'js/scripts.min.js'
-            }
         }
 
     });
 
     // grunt コマンドでなにやるか指定
-    grunt.registerTask('default', ['less:dist','watch', 'imagemin', 'pngmin', 'concat', 'uglify']);
+    grunt.registerTask('default', ['less:dist', 'connect', 'imagemin', 'pngmin', 'concat', 'uglify', 'watch']);
 
 };

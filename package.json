@@ -11,6 +11,7 @@
     "grunt-contrib-imagemin": "~0.7.1",
     "grunt-pngmin": "~0.6.1",
     "grunt-contrib-concat": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-connect": "*"
   }
 }
