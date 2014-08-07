@@ -9,6 +9,19 @@ module.exports = function(grunt){
 
     grunt.initConfig({
 
+        // less
+        less : {
+            dist : {
+                options : {
+                    compress : true
+                },
+                // コンパイルするファイルの指定。左辺には出力先のCSSファイル、右辺には元となるLessファイルへのパス
+                files : {
+                    "css/style.css" : "css/style.less"
+                }
+            }
+        },
+
         // 画像パス
         paths: {
             img: 'images/',
@@ -40,19 +53,6 @@ module.exports = function(grunt){
               dest: '<%= paths.imgdist %>'
             }]
           }
-        },
-
-        // less
-        less : {
-            dist : {
-                options : {
-                    compress : true
-                },
-                // コンパイルするファイルの指定。左辺には出力先のCSSファイル、右辺には元となるLessファイルへのパス
-                files : {
-                    "css/style.css" : "css/style.less"
-                }
-            }
         },
 
         // js-concat
@@ -105,6 +105,6 @@ module.exports = function(grunt){
     });
 
     // grunt コマンドでなにやるか指定
-    grunt.registerTask('default', ['less:dist', 'connect', 'imagemin', 'pngmin', 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['less:dist', 'imagemin', 'pngmin', 'concat', 'uglify', 'connect', 'watch']);
 
 };
