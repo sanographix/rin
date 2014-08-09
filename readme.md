@@ -120,6 +120,7 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 ### 2.0.0 (Aug 10, 2014)
 
 * lessからSassに移行する
+    * 以前のバージョンは <https://github.com/sanographix/rin-less> にあります
 
 
 # License
