@@ -1,10 +1,10 @@
 // Common
 
-@import "libs/normalize";
+@import "lib/normalize";
 @import "compass";
-@import "libs/_variable";
-@import "libs/_grid";
-@import "libs/_button";
-@import "libs/_common";
-@import "libs/core";
-@import "libs/_media-queries";
+@import "lib/variable";
+@import "lib/grid";
+@import "lib/button";
+@import "lib/common";
+@import "core/core";
+@import "core/media-queries";

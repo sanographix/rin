@@ -1,6 +1,4 @@
-/*
-grid
-*/
+// grid
 
 .container {
     width: 960px;
@@ -67,7 +65,7 @@ grid
 }
 
 
-/* Media Queries - Large Display */
+// Media Queries - Large Display
 
 @media (min-width: 1240px) {
 
@@ -77,7 +75,7 @@ grid
 
 }
 
-/* Media Queries - Tablet */
+// Media Queries - Tablet
 
 @media (min-width: 768px) and (max-width: 1040px) {
 
@@ -87,7 +85,7 @@ grid
 
 }
 
-/* Media Queries - Small Tablet & Smartphone */
+// Media Queries - Small Tablet & Smartphone
 
 @media (max-width: 767px) {
 
@@ -104,7 +102,7 @@ grid
 
 }
 
-/* Media Queries - Smartphone */
+// Media Queries - Smartphone
 
 @media (max-width: 480px) {
 
