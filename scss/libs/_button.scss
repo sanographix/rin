@@ -7,35 +7,34 @@
     cursor: pointer;
     line-height: 1.5;
     font-size: 90%;
-    .border-radius(.3em);
+    @include border-radius(.3em);
     overflow: hidden;
-    color: @base;
-    background-color: @btn;
+    color: $base;
+    background-color: $btn;
     text-decoration: none;
     border: 1px solid rgba(0,0,0,.15);
     &:hover {
-        background-color: @btn-hover;
-        color: @base;
+        background-color: $btn-hover;
+        color: $base;
         text-decoration: none;
         border: 1px solid rgba(0,0,0,.2);
     }
 }
 
 .btn-primary {
-    background-color: @btn-primary;
+    background-color: $btn-primary;
     color: #fff;
-    border: 1px solid @btn-primary;
+    border: 1px solid $btn-primary;
     &:hover {
-        background-color: @btn-primary-hover;
+        background-color: $btn-primary-hover;
         color: #fff;
-        border: 1px solid @btn-primary-hover;
+        border: 1px solid $btn-primary-hover;
     }
 }
 
 .btn-large {
     padding: .8em 2em;
     font-size: 150%;
-    -moz-box-sizing:border-box;
-    box-sizing: border-box;
-    border-radius: .5em;
+    @include box-sizing(border-box);
+    @include border-radius(.5em);
 }

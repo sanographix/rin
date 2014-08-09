@@ -12,6 +12,7 @@
     "grunt-pngmin": "~0.6.1",
     "grunt-contrib-concat": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-connect": "*"
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-compass": "~0.9.1"
   }
 }
