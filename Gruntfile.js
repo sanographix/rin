@@ -86,7 +86,7 @@ module.exports = function(grunt){
                 files: ['**/*.html']
             },
             img : {
-                files: ['<%= paths.img %>**/*.{png,jpg,gif}'],
+                files: ['**/*.{png,jpg,gif}'],
                 tasks: ['imagemin', 'pngmin']
             },
             scss: {
