@@ -1,34 +1,45 @@
 # Rin
 
-## A Lean, Basic HTML5 and CSS3 Template
+### A Lean HTML5 & SASS Template For Better Front-end Coding
 
-[@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているHTML5の初期テンプレートです。
+Rinは、[@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているテンプレートです。
 
-# Quick start
+# Getting Started
 
-[ここからダウンロード](https://github.com/sanographix/rin-html-template/archive/master.zip)してください。
+## Required Components
 
-# Grunt
-
-Gruntを使ってless,jsのコンパイルと画像圧縮ができます。
-
-### 1. node.jsをインストール
+### Node.js
 
 - <http://nodejs.org/>
 
-### 2. gruntをインストール
+### LiveReload
 
-    sudo npm install -g grunt-cli
-    
-### 3. プラグインをインストール
+LiveReloadブラウザ拡張を有効にしておいてください
 
-    npm install
-    
+- [for Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+- [for Firefox](https://addons.mozilla.org/ja/firefox/addon/livereload/)
+
+## Set Up
+
+Gruntインストールしてない場合はまずインストールする：
+
+    $ sudo npm install -g grunt-cli
+
+インストールしてる人はここから：
+
+    $ git clone git@github.com:sanographix/rin-html-template.git test
+    $ cd test
+    $ npm install
+
 - `package.json`に書いてあるプラグインがインストールされます
 
-### 4. gruntを起動する
+### gruntを起動する
 
-    grunt
+    $ grunt
+
+### ローカルサーバーをみる
+
+<http://localhost:8000/> にアクセスするとたぶん見れてます
 
 # Images
 
@@ -44,70 +55,23 @@ gruntを起動している間は、`images/`フォルダ以下を監視し、画
 	 
 # CSS
 
-LESSで書いています。構成は下記のとおりです。
+SCSS/Compassをサポートしています。構成は下記のとおりです。
 
-	style.less
-	┣ _normalize.less
-	┣ _mixin.less
-	┣ _variable.less
-	┗ _media-queries.less
-
+	scss
+	┣ style.scss
+	┣ core
+	┃ ┣ _core.scss // メインで編集するのはこれ
+	┃ ┗ _media-queries.scss	 
+	┗ lib 
+	   ┣ _button.scss
+	   ┣ _common.scss 
+	   ┣ _normalize.scss
+       ┗ _variable.scss
 
 ## _normalize.less
 
 
 [normalize.css](http://necolas.github.io/normalize.css/) です。
-
-
-## _mixin.less
-
-便利なmixinセットです。使えるクラスは以下の通りです。
-
-### よく使うの
-
-| class | Mixin |
-|-------|-----|
-|.clearfix|clearfixします|
-|.inline-block|`inline-block`のIE7対応版です|
-|.replace|テキストを画像置換するときにこれを呼び出すと便利です|
-  
-  
-### ベンダープレフィックスついてる系の
-
-| class | Mixin |
-|-------|-----|
-|.box-shadow(@x @y @blur @color);|box-shadow: @x @y @blur @color;|
-|.box-shadow-inset(@x @y @blur @color); | box-shadow: inset @x @y @blur @color; |
-|.text-shadow(@x @y @blur @color);| text-shadow: @x @y @blur @color; |
-|.border-radius(@topright, @bottomright, @bottomleft, @topleft);|border-top-right-radius: @topright;<br/>border-bottom-right-radius: @bottomright;<br/>border-bottom-left-radius: @bottomleft;<br/>border-top-left-radius: @topleft; |
-|.border-radius(@radius);| border-radius: @radius; |
-|.gradient(@color,@start,@stop);| background-color: @color;<br/>background: linear-gradient(top, @start, @stop);|
-|.opacity(@opacity);|opacity: @opacity;|
-|.ellipsis;|text-overflow: ellipsis;|
-|.transition(@duration, @ease);|    transition: all @duration @ease;|
-|.transition-duration(@duration);|transition-duration: @duration;|
-|.rotation(@deg);|transform: rotate(@deg);|
-|.scale(@ratio);|.transform:scale(@ratio);|
-|.translate(@x,@y);|.translate(@x, @y);|
-
-
-## _variable.less
-  
-サイトで使う色はここに書いておいて、変数から呼び出すと便利です。使い方はこんな感じ。
-
-
-	body {
-	    background: @bg;
-	    color: @base;
-	}
-
-	a {
-	    color: @link;
-	    border-color: @border;	
-	    &:hover {
-	        color: @hover;
-	    }
-	}
 
 
 ## _grid.less
@@ -153,79 +117,9 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 
 # Changelog
 
-### 1.5.2 (Aug 09, 2014)
+### 2.0.0 (Aug 10, 2014)
 
-* lessをより細かくファイル分けた
-
-### 1.5.1 (Aug 07, 2014)
-
-* 画像の監視がうまくいってなかったのを修正
-
-### 1.5.0 (Aug 06, 2014)
-
-* jsの結合・圧縮を行なうようにした
-* ローカルサーバー起動するようにした
-
-### 1.4.0 (Jul 02, 2014)
-
-* グリッドシステムっぽいの（`_grid.less`）を追加
-
-### 1.3.0 (Jun 25, 2014)
-
-* gruntでlessのコンパイル,画像圧縮できるようにした
-* clearfixを[Micro Clearfix](http://nicolasgallagher.com/micro-clearfix-hack/)にした
-* Google Analyticsのコードをユニバーサルアナリティクスに
-* その他不要な要素の削除
-
-
-### 1.2.0 (Mar 15, 2014)
-
-* `.btn`をグラデーションじゃなくする
-* フォントファミリ指定変更
-* normalizeを3.0.0に
-* mixinのベンダープレフィックスの削除
-* variableの見直し
-
-
-### 1.1.3 (Feb 21, 2014)
-
-* ソーシャルボタンを body 一番下でまとめて読み込むようにするのをやめた
-	* うまく読み込まれないことがあったため
-
-### 1.1.2 (Jan 12, 2014)
-
-* ソーシャルボタンを body 一番下でまとめて読み込むようにした
-
-
-### 1.1.1 (Dec 07, 2013)
-
-* `text-overflow`のブレフィックスいらなかった
-
-### 1.1 (Dec 02, 2013)
-
-* js を一番下に移動
- 
-### 1.0 (August 07, 2013)
-
-* より汎用的に使えるよう大幅に変更
-	* Twitter Bootstrapを削除
-	* Font Awesomeを削除
-	* retina.jsを削除
-* OGPの整理と追加
-* index.html にサンプルの文言を書かない
-
-### 0.3 (December 23, 2012)
-
-* Twitter Bootstrapを追加
-* Font Awesomeを追加
-* デフォルトフォントをOpen Sansに変更
-* index.htmlに適当なテンプレートを書いておく
-
-### 0.2 (December 08, 2012)
-
-* あまり一般的でないオレオレmixinをやめた
-    * 他の人がCSS読めなくなるので
-* _media-queries.lessにRetina用の記述欄を追加
+* lessからSassに移行する
 
 
 # License

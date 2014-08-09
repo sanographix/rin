@@ -3,28 +3,29 @@
 html,
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    background: @bg;
-    color: @base;
+    background: $bg;
+    color: $base;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
-    color: @link;
+    color: $link;
 
     &:hover {
-        color: @hover;
+        color: $hover;
     }
 
 }
 
 ::selection,
 ::-moz-selection {
-    background: @selection;
+    background: $selection;
     color:#fff;
 }
 
 h1,h2,h3,h4,h5,h6 {
     a,a:hover {
-        color: @base;
+        color: $base;
         text-decoration: none;
     }
 }

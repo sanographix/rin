@@ -1,5 +1,5 @@
 module.exports = function(grunt){
-    grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-pngmin');
@@ -9,15 +9,11 @@ module.exports = function(grunt){
 
     grunt.initConfig({
 
-        // less
-        less : {
-            dist : {
-                options : {
-                    compress : true
-                },
-                // コンパイルするファイルの指定。左辺には出力先のCSSファイル、右辺には元となるLessファイルへのパス
-                files : {
-                    "css/style.css" : "css/style.less"
+        // compass
+        compass: {
+            dist: {
+                options: {
+                    config: 'config.rb'
                 }
             }
         },
@@ -90,12 +86,12 @@ module.exports = function(grunt){
                 files: ['**/*.html']
             },
             img : {
-                files: ['<%= paths.img %>**/*.{png,jpg,gif}'],
+                files: ['**/*.{png,jpg,gif}'],
                 tasks: ['imagemin', 'pngmin']
             },
-            less : {
-                files : ["**/*.less"],
-                tasks : ["less:dist"]
+            scss: {
+                files: ['**/*.scss'],
+                tasks: ['compass']
             },
             scripts : {
                 files : ["js/libs/*.js"],
@@ -105,6 +101,6 @@ module.exports = function(grunt){
     });
 
     // grunt コマンドでなにやるか指定
-    grunt.registerTask('default', ['less:dist', 'imagemin', 'pngmin', 'concat', 'uglify', 'connect', 'watch']);
+    grunt.registerTask('default', ['connect', 'watch']);
 
 };
