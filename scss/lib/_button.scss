@@ -1,0 +1,71 @@
+// buttons
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    @include border-radius(.3em);
+    overflow: hidden;
+    color: $base;
+    background-color: $btn;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,.15);
+    &:hover {
+        background-color: $btn-hover;
+        color: $base;
+        text-decoration: none;
+        border-color: rgba(0,0,0,.2);
+    }
+}
+
+.btn-primary {
+    background-color: $btn-primary;
+    color: #fff;
+    border: 1px solid $btn-primary;
+    &:hover {
+        background-color: $btn-primary-hover;
+        color: #fff;
+        border-color: $btn-primary-hover;
+    }
+}
+
+.btn-large {
+    padding: .5em 1.7em;
+    font-size: 130%;
+    @include box-sizing(border-box);
+    @include border-radius(.5em);
+}
+
+.btn-ghost {
+    font-weight: bold;
+    background-color: transparent;
+    color: $base;
+    border: 3px solid $base;
+}
+
+.btn-ghost-white {
+    font-weight: bold;
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    &:hover {
+        background-color: transparent;
+        border-color: $btn-hover;
+        color: $btn-hover;
+    }
+}
+
+.btn-ghost-primary {
+    font-weight: bold;
+    background-color: transparent;
+    color: $btn-primary;
+    border: 3px solid $btn-primary;
+    &:hover {
+        background-color: transparent;
+        color: $btn-primary-hover;
+        border-color: $btn-primary-hover;
+    }
+}

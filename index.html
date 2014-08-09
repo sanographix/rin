@@ -1,60 +1,33 @@
 <!DOCTYPE html>
-<!--
-　　　　　　　　　　　　　,. 　---------
-　　　　　　　 　 ´￣￣　　 　 　 　 　 　 　 ｀　　 、
-　 　 　 　 ／ 　 　 　 　 |＿__　　 　 　 　 　 　 　 ＼
-　　　 　 / 　　 　 　 . |　|　　　｀ 　 .,　　　　: .　　　　＼
-　　　 ,　{　{　　　　 .: :|　| ,.　´￣　　｀　＼　 : : : .　　　 ヽ
-.　　 / 　 .∧ 　 　 : : :|　|′　　,，====- ､ヽ　: : : :.　 　 　 ,
-　　/　　 .′{　|　 : :..:.lゝ|　　 〃　　 )㍉　}i ‘。 }: : :.　|　　 ′
-　 'j　 　 ｉ 　　､＼: : :..|　　　　{　 ﾄr彳炒 '′ | .ﾊ: : :　|: :.
-　ｉ |　　| |　γ´＼＼: |　　　　　　ゞ= '″:.:.:.:. }/　|: ::　|: : :.
-　| |　　| |. /　　　___ ＼　　 　 　 　 　 　 　 　 　 |: ::　|⌒'.
-　| |　　| |/　　 〃⌒｀　　　　　　　　　　　　　　 /ｲ　/_　}│
-　|　 　 リ{　　 j{ __)j刈　　 ､　　　　 　 　 　 　 /　| /　lノ /
-　 ,　　　八　　j{弋r少′　　　　　　　　　 　 　 　 }′　ィ.:|:
-　 ′　　　ﾍ 　 ゝ　:.:.:.:.: 　 　 厂ヽ　 　 　 　 　 　 　 /: :..:|/
-　　 、　 ＼　＼　　　　　　　　＼ 　、　　 　 　 　 　 ′: : |
-　　　＼　　＼　＼　　　　　　　　＼_〉　　　　　　／　＼: :|
--->
-
-<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<html prefix="og: http://ogp.me/ns#">
 <head>
 
   <meta charset="utf-8">
-  <title>Rin - A Lean, Basic HTML5 and CSS3 Template by sanographix</title>
+  <title>Rin - A Lean, Basic HTML5 and SASS Template by sanographix</title>
 
-  <meta name="description" content="Rin is a Lean, Basic HTML5 and CSS3 Template" />
-  <meta name="keywords" content="html template" />
   <meta name="viewport" content="width=device-width">
 
-  <meta property="og:title" content="Rin - A Lean, Basic HTML5 and CSS3 Template by sanographix" />
-  <meta property="og:description" content="Rin is a Lean, Basic HTML5 and CSS3 Template" />
+  <meta property="og:title" content="Rin - A Lean, Basic HTML5 and SASS Template by sanographix" />
+  <meta property="og:description" content="Rin is a lean, basic HTML5 and SASS Template." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="http://sanographix.github.io/rin-html-template/" />
-  <meta property="og:image" content="http://sanographix.github.io/rin-html-template/images/og-image.gif" />
-  <meta property="og:site_name" content="Rin - A Lean, Basic HTML5 and CSS3 Template by sanographix" />
+  <meta property="og:image" content="http://sanographix.github.io/rin-html-template/dist/images/og-image.jpg" />
+  <meta property="og:site_name" content="Rin" />
 
   <meta property="fb:app_id" content="547137951989818" />
   <meta property="article:publisher" content="https://www.facebook.com/sanographix.net" />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@sanographix">
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/font-awesome.css" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="canonical" href="http://sanographix.github.io/rin-html-template/" />
   <link rel="author" href="https://plus.google.com/109963703491503474788" />
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico" />
 
-  <script type="text/javascript" src="//use.typekit.net/gtx4jty.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-  <!--[if IE]>
+  <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <link rel="stylesheet" href="css/fuck-ie.css" />
   <![endif]-->
 
   <!-- Google Analytics -->
@@ -73,6 +46,131 @@
 </head>
 <body>
 
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="span6 left">
+          <h1><a href="/">Rin</a></h1>
+        </div>
+        <div class="span6 right">
+          by SANOGRAPHIX.NET
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h2>A Lean HTML5 &amp; SASS Template<br>For Better Front-end Coding</h2>
+      <p>
+        <a href="https://github.com/sanographix/rin-html-template">GitHub Project</a>&nbsp;&nbsp;·&nbsp;&nbsp;Created &amp; Maintained by <a href="http://www.sanographix.net/">@sanographix</a>
+      </p>
+      <div class="btn-wrapper">
+        <a href="https://github.com/sanographix/rin-html-template" class="btn btn-large btn-ghost-primary">Download Rin</a>
+      </div>
+      <div class="rin">
+        <img src="dist/images/rin.gif">
+      </div>
+    </div>
+  </section>
+  <section class="section intro bg-green">
+    <div class="container">
+      <h2>Introducing Rin</h2>
+      <p>Rin is a lean, basic HTML5 and SASS Template.</p>
+      <h3>Features</h3>
+      <div class="row">
+        <div class="span3">
+          <img src="dist/images/reload.svg">
+          <h4>Live Browser Reloading</h4>
+        </div>
+        <div class="span3">
+          <img src="dist/images/compass.svg">
+          <h4>Scss/Compass support</h4>
+        </div>
+        <div class="span3">
+          <img src="dist/images/server.svg">
+          <h4>Built in HTTP Server</h4>
+        </div>
+        <div class="span3">
+          <img src="dist/images/performance.svg">
+          <h4>CSS/Images optimization</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section started bg-dark">
+    <div class="container">
+      <h2>Getting Started</h2>
+      <h3>Required Components</h3>
+      <ul>
+        <li><a href="http://nodejs.org">Node.js</a></li>
+        <li>LiveReload <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">for Chrome</a> / <a href="https://addons.mozilla.org/ja/firefox/addon/livereload/">for Firefox</a></li>
+      </ul>
+
+      <h3>Set Up</h3>
+      <pre>$ sudo npm install -g grunt-cli
+$ git clone git@github.com:sanographix/rin-html-template.git test
+$ cd test
+$ npm install
+$ grunt</pre>
+
+    <h3>Local Server</h3>
+      <p>Visit <a href="http://localhost:8000/">http://localhost:8000/</a>.</p>
+    </div>
+  </section>
+  <section class="section built">
+    <div class="container">
+      <h2>Built with Rin</h2>
+      <div class="row">
+        <div class="span4">
+          <a href="http://www.sanographix.net">
+            <img src="dist/images/sanographix.jpg">
+          </a>
+          <h4><a href="http://www.sanographix.net">SANOGRAPHIX.NET</a></h4>
+        </div>
+        <div class="span4">
+          <a href="http://jaddaplus.com/issue1/">
+            <img src="dist/images/jaddaplus.jpg">
+          </a>
+          <h4><a href="http://jaddaplus.com/issue1/">Jadda+ Issue #1</a></h4>
+        </div>
+        <div class="span4">
+          <a href="http://sanographix.github.io/tumblr/zen/">
+            <img src="dist/images/zen.jpg">
+          </a>
+          <h4><a href="http://sanographix.github.io/tumblr/zen/">ZEN</a></h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer section bg-dark">
+    <div class="container">
+      <ul class="nav social-buttons">
+        <li class="social-button">
+          <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=rin-html-template&type=watch&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        </li>
+        <li class="social-button">
+          <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=rin-html-template&type=follow&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="180" height="20"></iframe>
+        </li>
+        <li class="social-button">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </li>
+        <li>
+          <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+        </li>
+        <li>
+          <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </li>
+      </ul>
+      <p>Copyright (c) 2014 SANOGRAPHIX.NET</p>
+    </div>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+
   <!-- Facebook SDK -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -82,66 +180,6 @@
     js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-  <!-- END Facebook SDK -->
-
-  <header id="header">
-    <div class="container">
-      <h1>Rin</h1>
-      <h2>A Lean, Basic HTML5 and CSS3 Template</h2>
-      <p>
-        <i class="icon-github"></i>
-        <a href="https://github.com/sanographix/rin-html-template">GitHub Project</a>
-        &nbsp;&nbsp;·&nbsp;&nbsp;
-        Created &amp; Maintained by
-        <a href="http://www.sanographix.net">@sanographix</a>
-      </p>
-      <div class="button-wrapper">
-        <a href="https://github.com/sanographix/rin-html-template/archive/master.zip" class="btn btn-primary btn-lg">Donwload Rin</a>
-      </div>
-    </div>
-  </header>
-  <div class="container intro">
-    <h2>Introducing Rin.</h2>
-    <div class="row">
-      <div class="col-lg-4">
-        <h3>Build Fast</h3>
-        <i class="icon-code icon-4x"></i>
-        <p>Rin is a lean front-end template that contains Google Analytics tracking code, Facebook JavaScript SDK, and jQuery (via Google CDN).</p>
-      </div>
-      <div class="col-lg-4">
-        <h3>LESS Boilerplate</h3>
-        <i class="icon-css3 icon-4x"></i>
-        <p>Rin builds on LESS and includes normalize, color variables, useful mixins, and retina-ready media queries.</p>
-      </div>
-      <div class="col-lg-4">
-        <h3>OGP Tags</h3>
-        <i class="icon-tags icon-4x"></i>
-        <p>Rin has valid open graph protocol tags. And also supports <code>twitter:site</code>, <code>article:publisher</code>, <code>rel="author"</code>.</p>
-      </div>
-    </div>
-    <a href="https://github.com/sanographix/rin-html-template" class="btn btn-primary btn-lg">View on GitHub</a>
-  </div>
-
-  <footer id="footer">
-
-    <ul class="nav social-buttons">
-      <li class="social-button">
-        <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=rin-html-template&type=watch&count=true"
-    allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-      </li>
-      <li class="social-button">
-        <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=rin-html-template&type=follow&count=true"
-    allowtransparency="true" frameborder="0" scrolling="0" width="180" height="20"></iframe>
-      </li>
-      <li class="social-button">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </li>
-    </ul>
-    <p>
-      Copyright (c) 2013 <a href="http://www.sanographix.net" target="_blank">SANOGRAPHIX.NET</a>
-    </p>
-  </footer>
 
 </body>
 </html>
