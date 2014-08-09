@@ -1,86 +1,9 @@
-/*
-    Main CSS
-*/
+// style.less
 
-@import "_normalize.less";
-@import "_mixin.less";
-@import "_variable.less";
-@import "_grid.less";
-
-/* Common Styles */
-
-// Common
-
-html,
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    background: @bg;
-    color: @base;
-}
-
-a {
-    color: @link;
-
-    &:hover {
-        color: @hover;
-    }
-
-}
-
-::selection,
-::-moz-selection {
-    background: @selection;
-    color:#fff;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    a,a:hover {
-        color: @base;
-        text-decoration: none;
-    }
-}
-
-// ボタン
-
-.btn {
-    .inline-block;
-    text-align: center;
-    padding: .6em 1.2em;
-    cursor: pointer;
-    line-height: 1.5;
-    font-size: 90%;
-    .border-radius(3px);
-    overflow: hidden;
-    color: @base;
-    background-color: @btn;
-    text-decoration: none;
-    border: 1px solid rgba(0,0,0,.15);
-    &:hover {
-        background-color: @btn-hover;
-        color: @base;
-        text-decoration: none;
-        border: 1px solid rgba(0,0,0,.2);
-    }
-}
-
-.btn-primary {
-    background-color: @btn-primary;
-    color: #fff;
-    border: 1px solid @btn-primary;
-    &:hover {
-        background-color: @btn-primary-hover;
-        color: #fff;
-        border: 1px solid @btn-primary-hover;
-    }
-}
-
-.btn-large {
-    padding: .8em 2em;
-    font-size: 150%;
-    -moz-box-sizing:border-box;
-    box-sizing: border-box;
-}
-
-/* End Common Styles */
-
-@import "_media-queries.less";
+@import "libs/_normalize.less";
+@import "libs/_mixin.less";
+@import "libs/_variable.less";
+@import "libs/_grid.less";
+@import "libs/_button.less";
+@import "libs/main.less"; // main content
+@import "libs/_media-queries.less";
