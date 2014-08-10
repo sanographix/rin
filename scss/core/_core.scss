@@ -21,9 +21,22 @@ pre {
     padding: .5em;
 }
 
+.btn-wrapper {
+    margin: 2em 0;
+}
+
 .header {
     @include clearfix;
     padding: 1em 0;
+
+    a {
+        color: $base;
+        text-decoration: none;
+
+        &:hover {
+            color: $hover;
+        }
+    }
 
     .left {
         h1 {
@@ -35,6 +48,13 @@ pre {
     .right {
         text-align: right;
         font-size: 80%;
+    }
+
+    .version {
+        font-family: 'Nothing You Could Do', cursive;
+        color: $link;
+        margin-left: .8em;
+        font-size: 16px;
     }
 
 }
@@ -85,6 +105,7 @@ pre {
             bottom: -180px;
         }
     }
+
 }
 
 .intro {
@@ -124,4 +145,23 @@ pre {
         vertical-align: baseline !important;
     }
 
+}
+
+.built {
+    img {
+        @include border-radius(.3em);
+        border: 1px solid $border;
+    }
+}
+
+.footer {
+    font-size: 90%;
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: $hover;
+        }
+    }
 }

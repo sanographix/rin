@@ -43,18 +43,26 @@
     font-weight: bold;
     background-color: transparent;
     color: $base;
-    border: 3px solid $base;
+    border: 2px solid $base;
+    @include border-radius(.5em);
+    &.btn-large {
+        border-width: 3px;
+    }
 }
 
 .btn-ghost-white {
     font-weight: bold;
     background-color: transparent;
     color: #fff;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
+    @include border-radius(.5em);
     &:hover {
         background-color: transparent;
         border-color: $btn-hover;
         color: $btn-hover;
+    }
+    &.btn-large {
+        border-width: 3px;
     }
 }
 
@@ -62,10 +70,14 @@
     font-weight: bold;
     background-color: transparent;
     color: $btn-primary;
-    border: 3px solid $btn-primary;
+    border: 2px solid $btn-primary;
+    @include border-radius(.5em);
     &:hover {
         background-color: transparent;
         color: $btn-primary-hover;
         border-color: $btn-primary-hover;
+    }
+    &.btn-large {
+        border-width: 3px;
     }
 }
