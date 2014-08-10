@@ -89,8 +89,8 @@ module.exports = function(grunt){
                 files: ['**/*.{png,jpg,gif}'],
                 tasks: ['imagemin', 'pngmin']
             },
-            scss: {
-                files: ['**/*.scss'],
+            sass: {
+                files: ['**/*.sass'],
                 tasks: ['compass']
             },
             scripts : {

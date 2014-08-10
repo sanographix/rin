@@ -55,9 +55,9 @@ gruntを起動している間は、`images/`フォルダ以下を監視し、画
 	 
 # CSS
 
-SCSS/Compassをサポートしています。構成は下記のとおりです。
+Sass/Compassをサポートしています。構成は下記のとおりです。
 
-	scss
+	sass
 	┣ style.scss
 	┣ core
 	┃ ┣ _core.scss // メインで編集するのはこれ
