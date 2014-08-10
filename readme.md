@@ -68,13 +68,13 @@ SCSS/Compassをサポートしています。構成は下記のとおりです�
 	   ┣ _normalize.scss
        ┗ _variable.scss
 
-## _normalize.less
+## _normalize.scss
 
 
 [normalize.css](http://necolas.github.io/normalize.css/) です。
 
 
-## _grid.less
+## _grid.scss
 
 bootstrap感のあるグリッドを作れます。書き方はこんな感じです。
 
@@ -92,7 +92,7 @@ bootstrap感のあるグリッドを作れます。書き方はこんな感じ�
       </div>
     </div>
 
-## _media-queries.less
+## _media-queries.scss
   
 メディアクエリです。Retina ディスプレイ用のスタイルを書く欄と、レスポンシブデザイン用のスタイルを書く欄があります。
 
