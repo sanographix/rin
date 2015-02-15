@@ -9,6 +9,7 @@ body {
 
 a {
     color: $link;
+    transition: all .2s;
 
     &:hover {
         color: $hover;

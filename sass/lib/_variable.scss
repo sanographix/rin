@@ -2,15 +2,10 @@
 
 $bg: #fff; // Background color
 
-$base: #333; // Base text color
+$base: #444; // Base text color
 $light: #999; // Light text color
 
 $link: #37aed5; // Link text color
 $hover: darken($link,8%); // Link text color(hover)
 
 $border: #ddd; // Border color
-
-$btn: #fff; // Button Color
-$btn-hover: #f5f5f5; // Button Color (hover)
-$btn-primary: #37aed5; // Primary button color
-$btn-primary-hover: darken($btn-primary,8%); // Primary button color (hover)

@@ -7,34 +7,44 @@
     cursor: pointer;
     line-height: 1.5;
     font-size: 90%;
-    border-radius: .3em;
+    border-radius: .25em;
     overflow: hidden;
-    color: $base;
-    background-color: $btn;
+    color: $link;
+    background-color: transparent;
     text-decoration: none;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid $link;
+    transition: all .2s;
     &:hover {
-        background-color: $btn-hover;
-        color: $base;
+        background-color: $link;
+        color: #fff;
         text-decoration: none;
-        border: 1px solid rgba(0,0,0,.2);
+        border-color: $link;
+    }
+}
+
+.btn-light {
+    border-color: $light;
+    color: $base;
+    &:hover {
+        background-color: $base;
+        border-color: $base;
+        color: #fff;
     }
 }
 
 .btn-primary {
-    background-color: $btn-primary;
+    background-color: $link;
     color: #fff;
-    border: 1px solid $btn-primary;
+    border: 1px solid $link;
     &:hover {
-        background-color: $btn-primary-hover;
+        background-color: $hover;
         color: #fff;
-        border: 1px solid $btn-primary-hover;
+        border: 1px solid $hover;
     }
 }
 
 .btn-large {
-    padding: .8em 2em;
-    font-size: 150%;
+    padding: .7em 2em;
+    font-size: 120%;
     box-sizing: border-box;
-    border-radius: .5em;
 }
