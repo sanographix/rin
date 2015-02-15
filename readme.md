@@ -1,8 +1,6 @@
-# Rin
+# Rin 3.0
 
-### A Lean HTML5 & SASS Template For Better Front-end Coding
-
-Rinは、[@sanographix](http://twitter.com/sanographix)がウェブサイト制作時に使っているテンプレートです。
+### A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 
 # Getting Started
 
@@ -12,61 +10,59 @@ Rinは、[@sanographix](http://twitter.com/sanographix)がウェブサイト制�
 
 - <http://nodejs.org/>
 
-### LiveReload
-
-LiveReloadブラウザ拡張を有効にしておいてください
-
-- [for Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-- [for Firefox](https://addons.mozilla.org/ja/firefox/addon/livereload/)
-
 ## Set Up
 
-Gruntインストールしてない場合はまずインストールする：
+#### 1) Install gulp:
 
-    $ sudo npm install -g grunt-cli
+*Note:* If you have already installed gulp, skip this step.
 
-インストールしてる人はここから：
+    $ sudo npm install -g gulp
+    $ npm install --save-dev gulp
 
-    $ git clone git@github.com:sanographix/rin-html-template.git test
+#### 2) Clone rin:
+
+    $ git clone git@github.com:sanographix/rin.git test
     $ cd test
     $ npm install
 
-- `package.json`に書いてあるプラグインがインストールされます
+#### 3) Run gulp:
 
-### gruntを起動する
+    $ gulp
 
-    $ grunt
+# Directory
 
-### ローカルサーバーをみる
+gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視しています。作業用ファイルは `sass/`, `js/`, `images/` 以下に置いてください。それぞれのファイルは `build/` 以下にコンパイルされた状態で出力されます。
+	
+	rin/
+	┣┳ sass/
+	┃┣ js/
+	┃┗ images/
+	┃
+	┗┳ build/
+	 ┗┳ css/
+	  ┣ js/
+	  ┗ images/
 
-<http://localhost:8000/> にアクセスするとたぶん見れてます
 
 # Images
 
-gruntを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`dist/images`に追加します。圧縮できるファイルはgif,jpg,pngです。  
-ディレクトリ構成は下記のとおりです。
+gruntを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,pngです。
 
-	rin-html-template/
-	┣┳ images/
-	┃┗ オリジナルの画像をimages/以下に入れる
-	┗┳ dist/
-	 ┗┳ images/
-	  ┗ 圧縮済みの画像が自動的に追加される
 	 
 # CSS
 
-Sass/Compassをサポートしています。構成は下記のとおりです。
+Sassをサポートしています。構成は下記のとおりです。
 
 	sass
 	┣ style.scss
 	┣ core
 	┃ ┣ _core.scss // メインで編集するのはこれ
-	┃ ┗ _media-queries.scss	 
+	┃ ┗ _media-queries.scss	 // メディアクエリ用
 	┗ lib 
-	   ┣ _button.scss
-	   ┣ _common.scss 
-	   ┣ _normalize.scss
-       ┗ _variable.scss
+	   ┣ _button.scss // ボタン類
+	   ┣ _common.scss // body,aなどベース感のあるスタイル
+	   ┣ _normalize.scss // normalize
+       ┗ _variable.scss // 色など
 
 ## _normalize.scss
 
@@ -106,20 +102,24 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 
 # JS
 
-`js/libs/`以下の`js`ファイルが、`js/scripts.js`に結合されて出力されます。さらにそれを圧縮したjsが`js/scripts.min.js`に出力されます。
-
+`js/`以下の`.js`ファイルが、`build/js/scripts.js`に結合・圧縮されて出力されます。
 
 # ローカルサーバー
 
-`grunt-contrib-connect`によってローカルサーバーを起動します。デフォルトのURLは <http://localhost:8000/> です。
+[BrowserSync](http://www.browsersync.io/)によってローカルサーバーを起動します。デフォルトのURLは <http://localhost:3000/> です。
 
-[LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related) に対応しています。拡張をインストールしておくと、Gruntで`watch`対象のファイルが更新されたとき自動でブラウザをリロードします。
+gulpで`watch`対象のファイルが更新されたとき自動で画面をリロードします。
 
 # Changelog
 
-### 2.0.2 (Feb 15, 2015)
+### 3.0.0 (Feb 15, 2015)
 
-* リポジトリ名変更
+* gulp使う
+
+# Changelog (2.x)
+
+- 2.xのrinは別のリポジトリにあります
+    - <https://github.com/sanographix/rin-html-template>
 
 ### 2.0.2 (Nov 29, 2014)
 

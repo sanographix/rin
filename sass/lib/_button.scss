@@ -7,7 +7,7 @@
     cursor: pointer;
     line-height: 1.5;
     font-size: 90%;
-    @include border-radius(.3em);
+    border-radius: .3em;
     overflow: hidden;
     color: $base;
     background-color: $btn;
@@ -35,6 +35,6 @@
 .btn-large {
     padding: .8em 2em;
     font-size: 150%;
-    @include box-sizing(border-box);
-    @include border-radius(.5em);
+    box-sizing: border-box;
+    border-radius: .5em;
 }
