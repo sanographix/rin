@@ -49,10 +49,17 @@ gulp.task('browser-sync', function() {
     });
 });
 
+// Reload all Browsers
+
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
 // gulp コマンドでなにやるか指定
 
 gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif}',['imagemin']);
+    gulp.watch("*.html", ['bs-reload']);
 });
