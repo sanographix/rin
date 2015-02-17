@@ -1,6 +1,6 @@
 // Media Queries - Retina Display
 
-// Retina のデバイス全部に出す
+// All Retina Devices
 
 @media
 (-webkit-min-device-pixel-ratio: 2),
@@ -8,7 +8,7 @@
 
 }
 
-// Retina かつ iPad 以上のときに出す
+// Larger than iPad Display
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),
@@ -16,7 +16,7 @@
 
 }
 
-// Retina かつ PC のときだけに出す
+// Larger than PC Display (1025px)
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),

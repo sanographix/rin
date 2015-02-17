@@ -35,11 +35,11 @@
 .btn-primary {
     background-color: $link;
     color: #fff;
-    border: 1px solid $link;
+    border-color: $link;
     &:hover {
         background-color: $hover;
         color: #fff;
-        border: 1px solid $hover;
+        border-color: $hover;
     }
 }
 
@@ -47,4 +47,5 @@
     padding: .7em 2em;
     font-size: 120%;
     box-sizing: border-box;
+    border-width: 2px;
 }
