@@ -1,6 +1,6 @@
 # Rin 3.0
 
-### A lean, gulp-based HTML & SASS boilerplate for better front-end coding
+A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 
 <http://sanographix.github.io/rin/>
 
