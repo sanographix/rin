@@ -77,17 +77,17 @@ Sassをサポートしています。構成は下記のとおりです。
 
 ## _grid.scss
 
-bootstrap感のあるグリッドを作れます。書き方はこんな感じです。
+シンプルなグリッドを作れます。書き方はこんな感じです。
 
-    <div class="container">
-      <div class="row">
-        <div class="span4">
+    <div class="l-container">
+      <div class="l-row">
+        <div class="l-span4">
           span4
         </div>
-        <div class="span4">
+        <div class="l-span4">
           span4
         </div>
-        <div class="span4">
+        <div class="l-span4">
           span4
         </div>
       </div>
