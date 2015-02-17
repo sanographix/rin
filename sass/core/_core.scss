@@ -1,0 +1,129 @@
+// Core (Main Style)
+
+// common layout
+.l-section {
+    padding: 2em 0;
+    text-align: center;
+    h2 {
+        font-size: 300%;
+    }
+    h3 {
+        font-size: 200%;
+    }
+}
+
+.l-row {
+    text-align: center;
+}
+
+// header
+.l-header {
+    background-color: $link;
+    color: #fff;
+    text-align: center;
+
+    .header-content {
+        margin: 6em 0;
+    }
+
+    .header-image {
+      width: 180px;
+      height: auto;
+      &:hover {
+          @extend .tada;
+      }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    p {
+        color: rgba(255,255,255,.7);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        font-size: 80%;
+        margin: 0 0 1em;
+    }
+
+    h1 {
+        font-family: 'HalisGR-Thin';
+        font-size: 800%;
+        line-height: .9em;
+        margin: .1em 0 0;
+    }
+
+    h2 {
+        font-size: 200%;
+        margin: .5em 0;
+    }
+
+    .btn {
+        background-color: #fff;
+        text-transform: uppercase;
+        color: $link;
+        &:hover {
+          border-color: #fff;
+          background-color: $link;
+          color: #fff;
+        }
+    }
+
+    .btn-large {
+        font-size: 150%;
+        letter-spacing: .1em;
+    }
+
+}
+
+// features
+
+.l-features {
+    .l-span3 {
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+}
+
+// started
+
+.l-started {
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            padding: 0 1em;
+        }
+    }
+}
+
+pre {
+    font-family: Menlo, Consolas, Monaco;
+    background-color: #fdf6e3;
+    color: #657b83;
+    padding: 1em;
+    text-align: left;
+}
+
+.social-buttons {
+    > a,div,iframe {
+        vertical-align: top;
+        padding: 0 .2em;
+    }
+}
+
+// footer
+
+.l-footer {
+    background-color: #f8f8f8;
+    text-align: left;
+    color: $light;
+}

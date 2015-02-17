@@ -1,0 +1,43 @@
+// Common
+
+body {
+    font-family: 'HalisGR-Book', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    background: $bg;
+    color: $base;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: $link;
+    transition: all .2s;
+    text-decoration: none;
+
+    &:hover {
+        color: $hover;
+    }
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-family: 'HalisGR-Light';
+    line-height: 1.2;
+    a,a:hover {
+        color: $base;
+        text-decoration: none;
+    }
+}
+
+// mixin
+
+.clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}
