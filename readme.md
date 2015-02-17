@@ -2,32 +2,37 @@
 
 ### A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 
+<http://sanographix.github.io/rin/>
+
 # Getting Started
 
-## Required Components
+### Required Components
 
-### Node.js
-
-- <http://nodejs.org/>
+- Node.js
+    - <http://nodejs.org/>
 
 ## Set Up
 
 #### 1) Install gulp:
 
-*Note:* If you have already installed gulp, skip this step.
+*Note:* If you have already installed gulp, skip this section.
 
     $ sudo npm install -g gulp
     $ npm install --save-dev gulp
 
 #### 2) Clone rin:
 
-    $ git clone git@github.com:sanographix/rin.git test
-    $ cd test
+    $ git clone git@github.com:sanographix/rin.git test-repo
+    $ cd test-repo
     $ npm install
 
 #### 3) Run gulp:
 
     $ gulp
+
+#### 4) :tada:
+
+<hr/>
 
 # Directory
 
@@ -46,7 +51,7 @@ gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視し�
 
 # Images
 
-gruntを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,pngです。
+gruntを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,png,svgです。
 
 	 
 # CSS
@@ -114,7 +119,12 @@ gulpで`watch`対象のファイルが更新されたとき自動で画面をリ
 
 ### 3.0.0 (Feb 15, 2015)
 
-* gulp使う
+* タスクランナーをgulpに変更
+* svgの圧縮に対応
+* [BrowserSync](http://www.browsersync.io/)により、ファイルの変更を高速にローカルサーバーに反映
+* Compassをやめる
+* ベンダープレフィックスの自動付与
+* グリッドシステムのclass名をSMACSSライクに変更
 
 # Changelog (2.x)
 
@@ -149,4 +159,4 @@ gulpで`watch`対象のファイルが更新されたとき自動で画面をリ
 * jQuery: MIT/GPL license
 * Normalize.css: Public Domain
 * html5shiv: MIT/GPL license
-* grunt: MIT license
+* gulp: MIT license
