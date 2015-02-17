@@ -34,6 +34,12 @@
 
 @media (min-width: 768px) and (max-width: 1040px) {
 
+.l-header {
+    .header-content {
+        margin: 3em 0;
+    }
+}
+
 }
 
 
@@ -41,11 +47,50 @@
 
 @media (max-width: 767px) {
 
+.l-section {
+    padding: 1em 0;
+    h2 {
+        font-size: 200%;
+    }
+    h3 {
+        font-size: 150%;
+    }
 }
 
+// header
+.l-header {
+    .header-content {
+        margin: 3em 0;
+    }
+
+    .header-image {
+      width: 100px;
+    }
+
+    h1 {
+        font-size: 500%;
+    }
+
+    h2 {
+        font-size: 120%;
+        margin: .5em 0;
+    }
+
+
+    .btn-large {
+        font-size: 120%;
+    }
+
+}
+
+}
 
 // Media Queries - Smartphone
 
 @media (max-width: 480px) {
+
+body {
+    font-size: 95%;
+}
 
 }
