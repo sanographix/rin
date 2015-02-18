@@ -51,7 +51,7 @@ gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視し�
 
 # Images
 
-gruntを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,png,svgです。
+gulpを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,png,svgです。
 
 	 
 # CSS
