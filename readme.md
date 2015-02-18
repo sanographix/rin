@@ -129,7 +129,7 @@ gulpで`watch`対象のファイルが更新されたとき自動で画面をリ
 # Changelog (2.x)
 
 - 2.xのrinは別のリポジトリにあります
-    - <https://github.com/sanographix/rin-html-template>
+    - <https://github.com/sanographix/rin-previous-versions>
 
 ### 2.0.2 (Nov 29, 2014)
 
@@ -149,8 +149,6 @@ gulpで`watch`対象のファイルが更新されたとき自動で画面をリ
 ### 2.0.0 (Aug 10, 2014)
 
 * lessからSassに移行する
-    * 以前のバージョンは <https://github.com/sanographix/rin-less> にあります
-
 
 # License
 
