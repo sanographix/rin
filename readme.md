@@ -59,10 +59,8 @@ Sassをサポートしています。構成は下記のとおりです。
 
 	sass
 	┣ style.scss
-	┣ core
-	┃ ┣ _core.scss // メインで編集するのはこれ
-	┃ ┗ _media-queries.scss	 // メディアクエリ用
 	┗ lib 
+       ┣ _core.scss // メインで編集するのはこれ
 	   ┣ _button.scss // ボタン類
 	   ┣ _common.scss // body,aなどベース感のあるスタイル
 	   ┣ _normalize.scss // normalize
@@ -92,17 +90,55 @@ Sassをサポートしています。構成は下記のとおりです。
       </div>
     </div>
 
-## _media-queries.scss
+## _variable.scss
   
-メディアクエリです。Retina ディスプレイ用のスタイルを書く欄と、レスポンシブデザイン用のスタイルを書く欄があります。
+配色・メディアクエリの変数です。
+
+### Breakpoints
+
+- `mq-lg`
+    - Large display (>1240px)
+- `mq-md`
+    - Tablet display (<1024px)
+- `mq-sm`
+    - Small tablet & Smartphone (<767px)
+- `mq-xs`
+    - Smartphone (<480px)
+
+#### Example:
+
+    header h1 {
+        font-size: 200%;
+        @media #{$mq-lg} {
+            font-size: 300%;
+        }
+        @media #{$mq-sm} {
+            font-size: 100%;
+        }
+        @media #{$mq-xs} {
+            font-size: 80%;
+        }
+    }
+
+### at2x
 
 Retina ディスプレイ用のスタイルは下記の 3 パターンに出し分けできます。
 
-* Retina ディスプレイ用
-	* Retina のデバイス全部に出す
-	* Retina かつ iPad 以上のブラウザ幅のとき出す
-	* Retina かつ PC で見てるときだけ出す
-   
+- `at2x`
+    - Retina のデバイス全部に出す
+- `at2x-tablet`
+    - Retina かつ iPad 以上のブラウザ幅のとき出す
+- `at2x-pc`
+    - Retina かつ PC で見てるときだけ出す（ファイルサイズの大きい画像など、スマホで読み込むにはきびしい画像に使うとよさそうです）
+
+#### Example:
+
+    header h1 {
+        background: url("images/title.png");
+        @media #{$at2x} {
+            background: url("images/title@2x.png");
+        }
+    }
 
 # JS
 
@@ -115,6 +151,13 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 gulpで`watch`対象のファイルが更新されたとき自動で画面をリロードします。
 
 # Changelog
+
+### 3.0.1 (Feb 21, 2015)
+
+* Media Queriesを変数で呼び出せるようにした
+    * したがって、Media Queriesは1つのscssにまとめて書くのではなく、`_core.scss`の各セレクタに適宜書いていく方法を推奨します
+* Media Queriesのブレークポイントを変更
+* Media Queriesを`_variable.scss`に移動し、`_media-queries.scss`を削除 
 
 ### 3.0.0 (Feb 15, 2015)
 
