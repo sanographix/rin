@@ -10,16 +10,27 @@ $hover: darken($link,8%); // Link text color(hover)
 
 $border: #ddd; // Border color
 
-// Media Queries
 
-// Media Queries - Large Display
-$mq-lg: "(min-width: 1240px)";
+// Media Queries - Breakpoints
 
-// Media Queries - Tablet
-$mq-md: "(max-width: 1023px)";
+$mq-lg: "(min-width: 1240px)"; // Media Queries - Large Display
 
-// Media Queries - Small Tablet & Smartphone
-$mq-sm: "(max-width: 767px)";
+$mq-md: "(max-width: 1024px)"; // Media Queries - Tablet
 
-// Media Queries - Smartphone
-$mq-xs: "(max-width: 480px)";
+$mq-sm: "(max-width: 767px)"; // Media Queries - Small Tablet & Smartphone
+
+$mq-xs: "(max-width: 480px)"; // Media Queries - Smartphone
+
+
+// Media Queries - Retina Display
+$at2x: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx)"; // All Retina Devices
+
+$at2x-tablet: "
+(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),
+(min-resolution: 2dppx) and (min-device-width: 768px)
+"; // Larger than iPad Display
+
+$at2x-pc: "
+(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),
+(min-resolution: 2dppx) and (min-device-width: 1025px)
+"; // Larger than PC Display (1025px)
