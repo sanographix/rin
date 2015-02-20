@@ -5,6 +5,9 @@ body {
     background: $bg;
     color: $base;
     -webkit-font-smoothing: antialiased;
+    @media #{$mq-xs} {
+        font-size: 95%;
+    }
 }
 
 a {

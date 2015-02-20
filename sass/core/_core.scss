@@ -4,11 +4,22 @@
 .l-section {
     padding: 2em 0;
     text-align: center;
+    @media #{$mq-sm} {
+        padding: 1em 0;
+    }
+
     h2 {
         font-size: 300%;
+        @media #{$mq-sm} {
+            font-size: 200%;
+        }
     }
+
     h3 {
         font-size: 200%;
+        @media #{$mq-sm} {
+            font-size: 150%;
+        }
     }
 }
 
@@ -24,14 +35,20 @@
 
     .header-content {
         margin: 6em 0;
+        @media #{$mq-md} {
+            margin: 3em 0;
+        }
     }
 
     .header-image {
-      width: 180px;
-      height: auto;
-      &:hover {
-          @extend .tada;
-      }
+        width: 180px;
+        height: auto;
+        @media #{$mq-sm} {
+            width: 100px;
+        }
+        &:hover {
+            @extend .tada;
+        }
     }
 
     a {
@@ -50,11 +67,18 @@
         font-size: 800%;
         line-height: .9em;
         margin: .2em 0 .1em;
+        @media #{$mq-md} {
+            font-size: 500%;
+        }
     }
 
     h2 {
         font-size: 200%;
         margin: 0 0 .5em;
+        @media #{$mq-md} {
+            font-size: 120%;
+            margin: .5em 0;
+        }
     }
 
     .btn {
@@ -71,6 +95,10 @@
     .btn-large {
         font-size: 150%;
         letter-spacing: .1em;
+        @media #{$mq-md} {
+            font-size: 120%;
+        }
+
     }
 
 }

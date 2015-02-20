@@ -9,3 +9,17 @@ $link: #83d6ce; // Link text color
 $hover: darken($link,8%); // Link text color(hover)
 
 $border: #ddd; // Border color
+
+// Media Queries
+
+// Media Queries - Large Display
+$mq-lg: "(min-width: 1240px)";
+
+// Media Queries - Tablet
+$mq-md: "(max-width: 1023px)";
+
+// Media Queries - Small Tablet & Smartphone
+$mq-sm: "(max-width: 767px)";
+
+// Media Queries - Smartphone
+$mq-xs: "(max-width: 480px)";
