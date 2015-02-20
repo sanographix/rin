@@ -18,7 +18,6 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 *Note:* If you have already installed gulp, skip this section.
 
     $ sudo npm install -g gulp
-    $ npm install --save-dev gulp
 
 #### 2) Clone rin:
 
