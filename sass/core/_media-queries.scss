@@ -1,5 +1,4 @@
 // Media Queries - Retina Display
-
 // All Retina Devices
 
 @media
@@ -8,7 +7,7 @@
 
 }
 
-// Larger than iPad Display
+// Retina - Larger than iPad Display
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),
@@ -16,7 +15,7 @@
 
 }
 
-// Larger than PC Display (1025px)
+// Retina - Larger than PC Display (1025px)
 
 @media
 (-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),
@@ -32,7 +31,7 @@
 
 // Media Queries - Tablet
 
-@media (min-width: 768px) and (max-width: 1040px) {
+@media (max-width: 1023px) {
 
 }
 
