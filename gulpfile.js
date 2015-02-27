@@ -5,12 +5,13 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
+var reload = browserSync.reload;
+var fileinclude = require('gulp-file-include');
 
 // Sass
 
 gulp.task('sass', function () {
-    gulp.src('sass/**/*.scss')
+    gulp.src('source/sass/**/*.scss')
         .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
@@ -24,7 +25,7 @@ gulp.task('sass', function () {
 // Js-concat-uglify
 
 gulp.task('js', function() {
-    gulp.src(['js/*.js'])
+    gulp.src(['source/js/*.js'])
         .pipe(concat('scripts.js'))
         .pipe(uglify({preserveComments: 'some'})) // Keep some comments
         .pipe(gulp.dest('build/js'))
@@ -34,9 +35,23 @@ gulp.task('js', function() {
 // Imagemin
 
 gulp.task('imagemin', function() {
-    gulp.src(['images/**/*.{png,jpg,gif}'])
+    gulp.src(['source/images/**/*.{png,jpg,gif}'])
         .pipe(imagemin({optimizationLevel: 7}))
         .pipe(gulp.dest('build/images'));
+});
+
+// File-include
+
+gulp.task('fileinclude', function() {
+    gulp.src([
+            'source/templates/*.html',
+            '!source/templates/_*.html'
+            ])
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+    .pipe(gulp.dest('./'));
 });
 
 // Static server
@@ -57,9 +72,10 @@ gulp.task('bs-reload', function () {
 
 // Task for `gulp` command
 
-gulp.task('default',['browser-sync'], function() {
-    gulp.watch('sass/**/*.scss',['sass']);
-    gulp.watch('js/*.js',['js']);
-    gulp.watch('images/**/*.{png,jpg,gif}',['imagemin']);
+gulp.task('default',['browser-sync', 'fileinclude'], function() {
+    gulp.watch('source/sass/**/*.scss',['sass']);
+    gulp.watch('source/js/*.js',['js']);
+    gulp.watch('source/images/**/*.{png,jpg,gif}',['imagemin']);
     gulp.watch("*.html", ['bs-reload']);
+    gulp.watch("source/templates/*.html", ['fileinclude']);
 });
