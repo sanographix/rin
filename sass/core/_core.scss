@@ -1,6 +1,10 @@
 // Core (Main Style)
 
 // common layout
+body {
+    padding-top: 50px; //ヘッダ固定
+}
+
 .l-section {
     padding: 2em 0;
     text-align: center;
@@ -27,6 +31,61 @@
     text-align: center;
 }
 
+// globalheader
+.l-globalheader {
+    background-color: $link;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0 5px;
+    transition: all .2s;
+    a {
+        color: #fff;
+    }
+
+    &.is-scrolled {
+        box-shadow: 0 0 10px rgba(0,0,0,.15);
+    }
+
+}
+
+.l-globalheader-box {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    .l-globalheader-left {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 120%;
+    }
+
+    .l-globalheader-right {
+        display: table-cell;
+        text-align: right;
+        vertical-align: middle;
+    }
+}
+
+@media #{$mq-xs} {
+    .label {
+        display: none;
+    }
+}
+
+
+.navbar-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+}
+
 // header
 .l-header {
     background-color: $link;
@@ -34,7 +93,7 @@
     text-align: center;
 
     .header-content {
-        margin: 6em 0;
+        margin: 4em 0 6em;
         @media #{$mq-md} {
             margin: 3em 0;
         }

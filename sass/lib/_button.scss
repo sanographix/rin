@@ -49,3 +49,36 @@
     box-sizing: border-box;
     border-width: 2px;
 }
+
+.btn.btn-tw {
+    color: #fff;
+    background-color: $btn-tw;
+    border-color: transparent;
+
+    &:hover {
+        background-color: darken($btn-tw, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff;
+    background-color: $btn-fb;
+    border-color: transparent;
+
+    &:hover {
+        background-color: darken($btn-fb, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff;
+    background-color: $btn-b;
+    border-color: transparent;
+
+    &:hover {
+        background-color: darken($btn-b, 8%);
+        color: #fff;
+    }
+}
