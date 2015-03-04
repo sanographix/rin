@@ -25,12 +25,6 @@ $mq-xs: "(max-width: 480px)"; // Media Queries - Smartphone
 // Media Queries - Retina Display
 $at2x: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx)"; // All Retina Devices
 
-$at2x-tablet: "
-(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),
-(min-resolution: 2dppx) and (min-device-width: 768px)
-"; // Larger than iPad Display
+$at2x-tablet: "(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),(min-resolution: 2dppx) and (min-device-width: 768px)"; // Larger than iPad Display
 
-$at2x-pc: "
-(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),
-(min-resolution: 2dppx) and (min-device-width: 1025px)
-"; // Larger than PC Display (1025px)
+$at2x-pc: "(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),(min-resolution: 2dppx) and (min-device-width: 1025px)"; // Larger than PC Display (1025px)
