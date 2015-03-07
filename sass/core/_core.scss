@@ -93,9 +93,9 @@ body {
     text-align: center;
 
     .header-content {
-        margin: 4em 0 6em;
+        margin: 4em 0 2em;
         @media #{$mq-md} {
-            margin: 3em 0;
+            margin: 3em 0 2em;
         }
     }
 
@@ -160,6 +160,10 @@ body {
 
     }
 
+}
+
+.ad {
+    margin: 1em auto;
 }
 
 // features
