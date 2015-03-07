@@ -17,7 +17,7 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 
 *Note:* If you have already installed gulp, skip this section.
 
-    $ sudo npm install -g gulp
+    $ npm install -g gulp
 
 #### 2) Clone rin:
 
@@ -36,7 +36,7 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 # Directory
 
 gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視しています。作業用ファイルは `sass/`, `js/`, `images/` 以下に置いてください。それぞれのファイルは `build/` 以下にコンパイルされた状態で出力されます。
-	
+
 	rin/
 	┣┳ sass/
 	┃┣ js/
@@ -52,14 +52,14 @@ gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視し�
 
 gulpを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,png,svgです。
 
-	 
+
 # CSS
 
 Sassをサポートしています。構成は下記のとおりです。
 
 	sass
 	┣ style.scss
-	┗ lib 
+	┗ lib
        ┣ _core.scss // メインで編集するのはこれ
 	   ┣ _button.scss // ボタン類
 	   ┣ _common.scss // body,aなどベース感のあるスタイル
@@ -91,7 +91,7 @@ Sassをサポートしています。構成は下記のとおりです。
     </div>
 
 ## _variable.scss
-  
+
 配色・メディアクエリの変数です。
 
 ### Breakpoints
@@ -157,7 +157,7 @@ gulpで`watch`対象のファイルが更新されたとき自動で画面をリ
 * Media Queriesを変数で呼び出せるようにした
     * したがって、Media Queriesは1つのscssにまとめて書くのではなく、`_core.scss`の各セレクタに適宜書いていく方法を推奨します
 * Media Queriesのブレークポイントを変更
-* Media Queriesを`_variable.scss`に移動し、`_media-queries.scss`を削除 
+* Media Queriesを`_variable.scss`に移動し、`_media-queries.scss`を削除
 
 ### 3.0.0 (Feb 15, 2015)
 
