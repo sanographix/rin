@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // 外部サイトにはtarget blankする
+    // Add target="_blank" when user opens external link
     $('a').each(function() {
       var a = this;
       if (a.origin !== location.origin) {
