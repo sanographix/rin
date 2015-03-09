@@ -1,6 +1,6 @@
 # Rin 3.0
 
-A lean, gulp-based HTML & SASS boilerplate for better front-end coding
+A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 <http://sanographix.github.io/rin/>
 
@@ -19,7 +19,7 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 
     $ npm install -g gulp
 
-#### 2) Clone rin:
+#### 2) Clone Rin:
 
     $ git clone git@github.com:sanographix/rin.git test-repo
     $ cd test-repo
@@ -35,7 +35,8 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding
 
 # Directory
 
-gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視しています。作業用ファイルは `sass/`, `js/`, `images/` 以下に置いてください。それぞれのファイルは `build/` 以下にコンパイルされた状態で出力されます。
+While you are running Rin, It is watching directories under `sass/`, `js/`, `images/`. Put your project’s scss, js, images files in it. Each files will compile and output to `build/`.
+
 
 	rin/
 	┣┳ sass/
@@ -50,51 +51,58 @@ gulp を起動している間は、`sass/`, `js/`, `images/` 以下を監視し�
 
 # Images
 
-gulpを起動している間は、`images/`フォルダ以下を監視し、画像を自動的に圧縮し`build/images`に追加します。圧縮できるファイルはgif,jpg,png,svgです。
-
+Rin optimizes gif, jpg, png, svg images automatically using [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin). Each files will output to `build/`.
 
 # CSS
 
-Sassをサポートしています。構成は下記のとおりです。
+Rin supports scss.
 
 	sass
-	┣ style.scss
+	┣ style.scss // It imports under /lib files
 	┗ lib
-       ┣ _core.scss // メインで編集するのはこれ
-	   ┣ _button.scss // ボタン類
-	   ┣ _common.scss // body,aなどベース感のあるスタイル
-	   ┣ _normalize.scss // normalize
-       ┗ _variable.scss // 色など
+       ┣ _core.scss // Edit this files mostly
+	   ┣ _button.scss // Buttons
+	   ┣ _common.scss // Common components like `body` or `a` etc
+	   ┣ _grid.scss // Responsive grid system
+	   ┣ _normalize.scss // Normalize
+       ┗ _variable.scss // Color variables
 
 ## _normalize.scss
 
-
-[normalize.css](http://necolas.github.io/normalize.css/) です。
-
+ -> [normalize.css](http://necolas.github.io/normalize.css/)
 
 ## _grid.scss
 
-シンプルなグリッドを作れます。書き方はこんな感じです。
+It helps you make simple grid system. Like this:
 
     <div class="l-container">
       <div class="l-row">
         <div class="l-span4">
-          span4
+          Column A
         </div>
         <div class="l-span4">
-          span4
+          Column B
         </div>
         <div class="l-span4">
-          span4
+          Column C
         </div>
       </div>
     </div>
 
+## _button.scss
+
+Example:
+
+    <a class="btn">Normal button</a>
+    <a class="btn btn-light">Light color button</a>
+    <a class="btn btn-primary">Primary button!</a>
+    <a class="btn btn-large">Large button!!</a>
+
 ## _variable.scss
 
-配色・メディアクエリの変数です。
+Color variables and breakpoints of browser window width.
 
-### Breakpoints
+### Media queries breakpoints
 
 - `mq-lg`
     - Large display (>1240px)
@@ -122,14 +130,15 @@ Sassをサポートしています。構成は下記のとおりです。
 
 ### at2x
 
-Retina ディスプレイ用のスタイルは下記の 3 パターンに出し分けできます。
+Variables for retina devices.
 
 - `at2x`
-    - Retina のデバイス全部に出す
+    - All retina devices
 - `at2x-tablet`
-    - Retina かつ iPad 以上のブラウザ幅のとき出す
+    - Retina devices (larger than iPad display)
 - `at2x-pc`
-    - Retina かつ PC で見てるときだけ出す（ファイルサイズの大きい画像など、スマホで読み込むにはきびしい画像に使うとよさそうです）
+    - Retina devices larger than PC display (1025px)
+    - Use this variables when you need to load too large file size images.
 
 #### Example:
 
@@ -142,55 +151,20 @@ Retina ディスプレイ用のスタイルは下記の 3 パターンに出し�
 
 # JS
 
-`js/`以下の`.js`ファイルが、`build/js/scripts.js`に結合・圧縮されて出力されます。
+js files under `js/` will output to `build/js/scripts.js` with concatenated and compressed.
 
-# ローカルサーバー
+# Local Server
 
-[BrowserSync](http://www.browsersync.io/)によってローカルサーバーを起動します。デフォルトのURLは <http://localhost:3000/> です。
+Rin runs local server by using [BrowserSync](http://www.browsersync.io/). Its default URL is <http://localhost:3000/>. It reloads your browser automatically when you update a file that gulp is watching.
 
-gulpで`watch`対象のファイルが更新されたとき自動で画面をリロードします。
+# Author
 
-# Changelog
+### Showkaku Sano (sanographix)
 
-### 3.0.1 (Feb 21, 2015)
+Graphic designer from Kyoto.
 
-* Media Queriesを変数で呼び出せるようにした
-    * したがって、Media Queriesは1つのscssにまとめて書くのではなく、`_core.scss`の各セレクタに適宜書いていく方法を推奨します
-* Media Queriesのブレークポイントを変更
-* Media Queriesを`_variable.scss`に移動し、`_media-queries.scss`を削除
-
-### 3.0.0 (Feb 15, 2015)
-
-* タスクランナーをgulpに変更
-* svgの圧縮に対応
-* [BrowserSync](http://www.browsersync.io/)により、ファイルの変更を高速にローカルサーバーに反映
-* Compassをやめる
-* ベンダープレフィックスの自動付与
-* グリッドシステムのclass名をSMACSSライクに変更
-
-# Changelog (2.x)
-
-- 2.xのrinは別のリポジトリにあります
-    - <https://github.com/sanographix/rin-previous-versions>
-
-### 2.0.2 (Nov 29, 2014)
-
-* `:selection`のCSSをやめる
-* facebook sdk を新しいやつに
-
-### 2.0.2 (Sep 15, 2014)
-
-* scssの監視に失敗する問題を修正
-* `html`に指定してたCSSを削除
-
-### 2.0.1 (Sep 10, 2014)
-
-* 改行コードがUNIXじゃなくてDOSになってたのを修正
-
-
-### 2.0.0 (Aug 10, 2014)
-
-* lessからSassに移行する
+- <http://www.sanographix.net/>
+- Twitter: [@sanographix](http://twitter.com/sanographix/)
 
 # License
 
