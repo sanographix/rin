@@ -34,7 +34,7 @@ gulp.task('js', function() {
 // Imagemin
 
 gulp.task('imagemin', function() {
-    gulp.src(['images/**/*.{png,jpg,gif}'])
+    gulp.src(['images/**/*.{png,jpg,gif,svg}'])
         .pipe(imagemin({optimizationLevel: 7}))
         .pipe(gulp.dest('build/images'));
 });
@@ -60,6 +60,6 @@ gulp.task('bs-reload', function () {
 gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
-    gulp.watch('images/**/*.{png,jpg,gif}',['imagemin']);
+    gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
     gulp.watch("*.html", ['bs-reload']);
 });
