@@ -1,5 +1,4 @@
 // buttons
-
 .btn {
     display: inline-block;
     text-align: center;
@@ -21,7 +20,6 @@
         border-color: $link;
     }
 }
-
 .btn-light {
     border-color: $light;
     color: $base;
@@ -31,7 +29,6 @@
         color: #fff;
     }
 }
-
 .btn-primary {
     background-color: $link;
     color: #fff;
@@ -42,7 +39,6 @@
         border-color: $hover;
     }
 }
-
 .btn-large {
     padding: .7em 2em;
     font-size: 120%;
