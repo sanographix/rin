@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var ejs = require("gulp-ejs");
 
 // Sass
 
@@ -39,12 +40,21 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('build/images'));
 });
 
+// ejs
+
+gulp.task("ejs", function() {
+    gulp.src(['./*.ejs','!' + '**/_*.ejs']) // _からはじまるejsはhtmlを生成しない
+        .pipe(ejs())
+        .pipe(gulp.dest('build/'))
+});
+
 // Static server
 
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./"
+            baseDir: "build/",       //対象ディレクトリ
+            index  : "index.html"      //インデックスファイル
         }
     });
 });
@@ -61,5 +71,6 @@ gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("*.html", ['bs-reload']);
+    gulp.watch("build/*.html", ['bs-reload']);
+    gulp.watch('./*.ejs', ['ejs']);
 });
