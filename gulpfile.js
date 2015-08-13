@@ -43,7 +43,7 @@ gulp.task('imagemin', function() {
 // ejs
 
 gulp.task("ejs", function() {
-    gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // _からはじまるejsはhtmlを生成しない
+    gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
         .pipe(ejs())
         .pipe(gulp.dest('build/'))
 });
@@ -53,8 +53,8 @@ gulp.task("ejs", function() {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "build/",       //対象ディレクトリ
-            index  : "index.html"      //インデックスファイル
+            baseDir: "build/", //　Target directory
+            index  : "index.html" // index file
         }
     });
 });
