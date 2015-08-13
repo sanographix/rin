@@ -43,7 +43,7 @@ gulp.task('imagemin', function() {
 // ejs
 
 gulp.task("ejs", function() {
-    gulp.src(['./*.ejs','!' + '**/_*.ejs']) // _からはじまるejsはhtmlを生成しない
+    gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // _からはじまるejsはhtmlを生成しない
         .pipe(ejs())
         .pipe(gulp.dest('build/'))
 });
@@ -72,5 +72,5 @@ gulp.task('default',['browser-sync'], function() {
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
     gulp.watch("build/*.html", ['bs-reload']);
-    gulp.watch('./*.ejs', ['ejs']);
+    gulp.watch('templates/*.ejs', ['ejs']);
 });
