@@ -10,6 +10,7 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 - Node.js
     - <http://nodejs.org/>
+    - v0.12.x is recommended.
 
 ## Set Up
 
