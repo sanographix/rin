@@ -35,19 +35,24 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 # Directory
 
-While you are running Rin, It is watching directories under `sass/`, `js/`, `images/`. Put your project’s scss, js, images files in it. Each files will compile and output to `build/`.
+While you are running Rin, It is watching directories under `templates/`, `sass/`, `js/`, `images/`. Put your project’s templates(ejs), scss, js, images files in it. Each files will compile and output to `build/`.
 
 
 	rin/
-	┣┳ sass/
+	┣┳ templates/
+	┃┣ sass/
 	┃┣ js/
 	┃┗ images/
 	┃
 	┗┳ build/
-	 ┗┳ css/
+	 ┗┳ index.html
+	  ┣ css/
 	  ┣ js/
 	  ┗ images/
 
+# Templates
+
+Rin supports EJS template.
 
 # Images
 

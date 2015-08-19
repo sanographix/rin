@@ -1,0 +1,11 @@
+{
+  "site-name": "test",
+  "site-root-url": "http://example.com/",
+  "pages": [
+    {
+      "page-id": "index",
+      "page-title": "ページ名",
+      "page-url": "index.html"
+    }
+  ]
+}
