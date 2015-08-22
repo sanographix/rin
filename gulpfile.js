@@ -7,6 +7,7 @@ var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var ejs = require("gulp-ejs");
+var plumber = require("gulp-plumber");
 
 // Sass
 
@@ -42,9 +43,12 @@ gulp.task('imagemin', function() {
 
 // ejs
 
+var fs = require('fs');
+var json = JSON.parse(fs.readFileSync("site.json")); // parse json
 gulp.task("ejs", function() {
     gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
-        .pipe(ejs())
+        .pipe(plumber())
+        .pipe(ejs(json))
         .pipe(gulp.dest('build/'))
 });
 
@@ -72,5 +76,5 @@ gulp.task('default',['browser-sync'], function() {
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
     gulp.watch("build/*.html", ['bs-reload']);
-    gulp.watch('templates/*.ejs', ['ejs']);
+    gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
 });
