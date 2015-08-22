@@ -3,27 +3,24 @@
 <head>
 
   <meta charset="utf-8">
-  <title><%= pageTitle %> - </title>
+  <title><%= pageTitle %> - <%= siteName %></title>
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
   <meta name="viewport" content="width=device-width">
 
-  <meta property="og:title" content="<%= pageTitle %> - " />
-  <meta property="og:description" content="" />
+  <meta property="og:title" content="<%= pageTitle %> - <%= siteName %>" />
+  <meta property="og:description" content="<%= pageDescription %>" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
+  <meta property="og:url" content="<%= siteRootUrl %><%= pageUrl %>" />
+  <meta property="og:image" content="<%= ogImageUrl %>" />
+  <meta property="og:site_name" content="<%= siteName %>" />
 
-  <meta property="fb:app_id" content="" />
-  <meta property="article:publisher" content="" />
+  <meta property="fb:app_id" content="<%= fbAppId %>" />
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="">
+  <meta name="twitter:site" content="<%= twitterSite %>">
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="canonical" href="" />
+  <link rel="canonical" href="<%= siteRootUrl %>" />
 
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,7 +32,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-XXXXXXXX-X', 'auto'); //Change UA-XXXXXXXX-X to your site's ID
+    ga('create', '<%= googleAnalyticsId %>', 'auto');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
   </script>
