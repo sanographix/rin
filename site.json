@@ -1,0 +1,8 @@
+{
+  "siteName": "Example Site",
+  "siteRootUrl": "http://example.com/",
+  "ogImageUrl": "http://example.com/images/og-image.jpg",
+  "fbAppId": "",
+  "twitterSite": "",
+  "googleAnalyticsId": ""
+}
