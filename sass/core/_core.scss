@@ -33,8 +33,7 @@ body {
 
 // globalheader
 .l-globalheader {
-    background-color: $link;
-    color: #fff;
+    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,11 +42,10 @@ body {
     padding: 10px 0 5px;
     transition: all .2s;
     a {
-        color: #fff;
     }
 
     &.is-scrolled {
-        box-shadow: 0 0 10px rgba(0,0,0,.15);
+        box-shadow: 0 0 1em rgba(0,0,0,.2);
     }
 
 }
@@ -101,17 +99,6 @@ body {
         }
     }
 
-    .header-image {
-        width: 180px;
-        height: auto;
-        @media #{$mq-sm} {
-            width: 100px;
-        }
-        &:hover {
-            @extend .tada;
-        }
-    }
-
     a {
         color: #fff;
     }
@@ -125,17 +112,20 @@ body {
 
     h1 {
         font-family: 'HalisGR-Thin';
-        font-size: 800%;
+        font-size: 1000%;
         line-height: .9em;
-        margin: .2em 0 .1em;
+        margin: .5em 0 .3em;
         @media #{$mq-md} {
             font-size: 500%;
+        }
+        .bold {
+            font-family: 'HalisGR-Book';
         }
     }
 
     h2 {
         font-size: 200%;
-        margin: 0 0 .5em;
+        margin: 0 0 1.5em;
         @media #{$mq-md} {
             font-size: 120%;
             margin: .5em 0;
