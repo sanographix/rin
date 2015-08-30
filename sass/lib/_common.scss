@@ -1,25 +1,39 @@
 // Common
+
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'HalisGR-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: $bg;
     color: $base;
     -webkit-font-smoothing: antialiased;
+    @media #{$mq-xs} {
+        font-size: 95%;
+    }
 }
+
 a {
     color: $link;
     transition: all .2s;
+    text-decoration: none;
+
     &:hover {
         color: $hover;
     }
+
 }
+
 h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-family: 'HalisGR-Light', sans-serif;
+    line-height: 1.2;
     a,a:hover {
         color: $base;
         text-decoration: none;
     }
 }
+
 // mixin
-@mixin clearfix() {
+
+.clearfix {
     *zoom: 1;
     &:before,
     &:after {

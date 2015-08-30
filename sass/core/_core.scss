@@ -1,0 +1,222 @@
+// Core (Main Style)
+
+// common layout
+body {
+    padding-top: 50px; //ヘッダ固定
+}
+
+.l-section {
+    padding: 2em 0;
+    text-align: center;
+    @media #{$mq-sm} {
+        padding: 1em 0;
+    }
+
+    h2 {
+        font-size: 300%;
+        @media #{$mq-sm} {
+            font-size: 200%;
+        }
+    }
+
+    h3 {
+        font-size: 200%;
+        @media #{$mq-sm} {
+            font-size: 150%;
+        }
+    }
+}
+
+.l-row {
+    text-align: center;
+}
+
+// globalheader
+.l-globalheader {
+    background-color: $link;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 10px 0 5px;
+    transition: all .2s;
+    a {
+        color: #fff;
+    }
+
+    &.is-scrolled {
+        box-shadow: 0 0 10px rgba(0,0,0,.15);
+    }
+
+}
+
+.l-globalheader-box {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    .l-globalheader-left {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 120%;
+        width: 30%;
+    }
+
+    .l-globalheader-right {
+        display: table-cell;
+        text-align: right;
+        vertical-align: middle;
+    }
+}
+
+@media #{$mq-xs} {
+    .label {
+        display: none;
+    }
+}
+
+
+.navbar-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+}
+
+// header
+.l-header {
+    background-color: $link;
+    color: #fff;
+    text-align: center;
+
+    .header-content {
+        margin: 4em 0 2em;
+        @media #{$mq-md} {
+            margin: 3em 0 2em;
+        }
+    }
+
+    .header-image {
+        width: 180px;
+        height: auto;
+        @media #{$mq-sm} {
+            width: 100px;
+        }
+        &:hover {
+            @extend .tada;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    p {
+        color: rgba(255,255,255,.7);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        font-size: 80%;
+    }
+
+    h1 {
+        font-family: 'HalisGR-Thin';
+        font-size: 800%;
+        line-height: .9em;
+        margin: .2em 0 .1em;
+        @media #{$mq-md} {
+            font-size: 500%;
+        }
+    }
+
+    h2 {
+        font-size: 200%;
+        margin: 0 0 .5em;
+        @media #{$mq-md} {
+            font-size: 120%;
+            margin: .5em 0;
+        }
+    }
+
+    .btn {
+        background-color: #fff;
+        text-transform: uppercase;
+        color: $link;
+        &:hover {
+          border-color: #fff;
+          background-color: $link;
+          color: #fff;
+        }
+    }
+
+    .btn-large {
+        font-size: 150%;
+        letter-spacing: .1em;
+        @media #{$mq-md} {
+            font-size: 120%;
+        }
+
+    }
+
+}
+
+.ad {
+    margin: 1em auto;
+}
+
+// features
+
+.l-features {
+    .l-span3 {
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+}
+
+// started
+
+.l-started {
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline-block;
+            padding: 0 1em;
+        }
+    }
+}
+
+pre {
+    font-family: Menlo, Consolas, Monaco;
+    background-color: #fdf6e3;
+    color: #657b83;
+    padding: 1em;
+    text-align: left;
+    word-break: break-word;
+}
+
+.social-buttons {
+    > a,div,iframe {
+        vertical-align: top;
+        padding: 0 .2em;
+    }
+}
+
+// footer
+
+.l-footer {
+    background-color: #f8f8f8;
+    text-align: left;
+    color: $light;
+}

@@ -1,4 +1,5 @@
 // buttons
+
 .btn {
     display: inline-block;
     text-align: center;
@@ -20,6 +21,7 @@
         border-color: $link;
     }
 }
+
 .btn-light {
     border-color: $light;
     color: $base;
@@ -29,19 +31,54 @@
         color: #fff;
     }
 }
+
 .btn-primary {
     background-color: $link;
     color: #fff;
-    border-color: $link;
+    border: 1px solid $link;
     &:hover {
         background-color: $hover;
         color: #fff;
-        border-color: $hover;
+        border: 1px solid $hover;
     }
 }
+
 .btn-large {
     padding: .7em 2em;
     font-size: 120%;
     box-sizing: border-box;
     border-width: 2px;
+}
+
+.btn.btn-tw {
+    color: #fff;
+    background-color: $btn-tw;
+    border-color: transparent;
+
+    &:hover {
+        background-color: darken($btn-tw, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff;
+    background-color: $btn-fb;
+    border-color: transparent;
+
+    &:hover {
+        background-color: darken($btn-fb, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff;
+    background-color: $btn-b;
+    border-color: transparent;
+
+    &:hover {
+        background-color: darken($btn-b, 8%);
+        color: #fff;
+    }
 }
