@@ -6,6 +6,8 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var ejs = require("gulp-ejs");
+var plumber = require("gulp-plumber");
 
 // Sass
 
@@ -39,12 +41,24 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('build/images'));
 });
 
+// ejs
+
+var fs = require('fs');
+var json = JSON.parse(fs.readFileSync("site.json")); // parse json
+gulp.task("ejs", function() {
+    gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
+        .pipe(plumber())
+        .pipe(ejs(json))
+        .pipe(gulp.dest('./'))
+});
+
 // Static server
 
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./"
+            baseDir: "./", //　Target directory
+            index  : "index.html" // index file
         }
     });
 });
@@ -61,5 +75,6 @@ gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("*.html", ['bs-reload']);
+    gulp.watch("./*.html", ['bs-reload']);
+    gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
 });

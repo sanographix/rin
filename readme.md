@@ -1,4 +1,4 @@
-# Rin 3.0
+# Rin 4
 
 A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
@@ -36,19 +36,52 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 # Directory
 
-While you are running Rin, It is watching directories under `sass/`, `js/`, `images/`. Put your project’s scss, js, images files in it. Each files will compile and output to `build/`.
+While you are running Rin, It is watching directories under `templates/`, `sass/`, `js/`, `images/`. Put your project’s templates(ejs), scss, js, images files in it.
 
+`sass/`, `js/`, `images/` files will compile and output to `build/`.
 
 	rin/
-	┣┳ sass/
+	┣┳ templates/
+	┃┣ sass/
 	┃┣ js/
 	┃┗ images/
+	┃
+	┣ index.html
 	┃
 	┗┳ build/
 	 ┗┳ css/
 	  ┣ js/
 	  ┗ images/
 
+# Templates
+
+Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save `.ejs` files under `templates/` directory, they will output as `.html` to root directory.
+
+## Template tags
+
+### site.json
+
+Put variables which use for every pages.
+
+Example:	
+	
+	{
+	  "siteName": "Example Site"
+	}
+
+### index.ejs
+
+If you want to use variables for particular single page, put variables into `<% var %>` at each page.
+
+Example:
+	
+	<% var
+	pageTitle = "Toppage";
+	%>
+	<head>
+		<title><%= pageTitle %> - <%= siteName %></title>
+		<
+	</head>
 
 # Images
 
@@ -76,6 +109,8 @@ Rin supports scss.
 
 It helps you make simple grid system. Like this:
 
+### 3-column
+
     <div class="l-container">
       <div class="l-row">
         <div class="l-span4">
@@ -86,6 +121,19 @@ It helps you make simple grid system. Like this:
         </div>
         <div class="l-span4">
           Column C
+        </div>
+      </div>
+    </div>
+
+### 2-column
+
+    <div class="l-container">
+      <div class="l-row">
+        <div class="l-span6">
+          Column A
+        </div>
+        <div class="l-span6">
+          Column B
         </div>
       </div>
     </div>
