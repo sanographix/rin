@@ -75,6 +75,6 @@ gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("./**/*.html", ['bs-reload']);
+    gulp.watch("./*.html", ['bs-reload']);
     gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
 });
