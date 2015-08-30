@@ -1,4 +1,4 @@
-# Rin 4.0
+# Rin 4
 
 A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
