@@ -1,9 +1,13 @@
 {
   "name": "rin",
-  "version": "0.3.0",
-  "description": "",
+  "version": "4.0.0",
+  "description": "A Lean HTML & SASS Boilerplate",
   "author": "sanographix",
-  "license": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanographix/rin"
+  },
   "devDependencies": {
     "browser-sync": "~2.0.1",
     "gulp": "^3.8.11",
