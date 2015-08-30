@@ -6,7 +6,7 @@ body {
 }
 
 .l-section {
-    padding: 2em 0;
+    padding: 3em 0;
     text-align: center;
     @media #{$mq-sm} {
         padding: 1em 0;
@@ -14,6 +14,7 @@ body {
 
     h2 {
         font-size: 300%;
+        margin-top: .2em;
         @media #{$mq-sm} {
             font-size: 200%;
         }
@@ -31,10 +32,20 @@ body {
     text-align: center;
 }
 
+.badge {
+    color: $link;
+    border: 1px solid $link;
+    font-size: 70%;
+    padding: .2em .4em;
+    line-height: 1em;
+    margin: 0;
+    display: inline-block;
+    border-radius: 20px;
+}
+
 // globalheader
 .l-globalheader {
-    background-color: $link;
-    color: #fff;
+    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,12 +53,8 @@ body {
     width: 100%;
     padding: 10px 0 5px;
     transition: all .2s;
-    a {
-        color: #fff;
-    }
-
     &.is-scrolled {
-        box-shadow: 0 0 10px rgba(0,0,0,.15);
+        box-shadow: 0 0 1em rgba(0,0,0,.2);
     }
 
 }
@@ -100,42 +107,34 @@ body {
             margin: 3em 0 2em;
         }
     }
-
-    .header-image {
-        width: 180px;
-        height: auto;
-        @media #{$mq-sm} {
-            width: 100px;
-        }
-        &:hover {
-            @extend .tada;
-        }
-    }
-
     a {
         color: #fff;
     }
-
     p {
         color: rgba(255,255,255,.7);
         letter-spacing: .2em;
         text-transform: uppercase;
         font-size: 80%;
     }
-
     h1 {
         font-family: 'HalisGR-Thin';
-        font-size: 800%;
+        font-size: 1000%;
         line-height: .9em;
-        margin: .2em 0 .1em;
+        margin: .5em 0 .3em;
         @media #{$mq-md} {
+            font-size: 800%;
+        }
+        @media #{$mq-sm} {
             font-size: 500%;
+        }
+        .bold {
+            font-family: 'HalisGR-Book';
         }
     }
 
     h2 {
         font-size: 200%;
-        margin: 0 0 .5em;
+        margin: 0 0 1.5em;
         @media #{$mq-md} {
             font-size: 120%;
             margin: .5em 0;
@@ -143,13 +142,14 @@ body {
     }
 
     .btn {
-        background-color: #fff;
+        background-color: transparent;
+          border-color: #fff;
         text-transform: uppercase;
-        color: $link;
+        color: #fff;
         &:hover {
           border-color: #fff;
-          background-color: $link;
-          color: #fff;
+          background-color: #fff;
+          color: $link;
         }
     }
 
@@ -171,6 +171,12 @@ body {
 // features
 
 .l-features {
+    .l-row {
+        margin-bottom: 2em;
+        @media #{$mq-sm} {
+            margin-bottom: 0;
+        }
+    }
     .l-span3 {
         img {
             width: 100px;
@@ -187,6 +193,7 @@ body {
 // started
 
 .l-started {
+    background-color: #cad7dd;
     ul {
         list-style: none;
         padding: 0;
@@ -199,11 +206,15 @@ body {
 
 pre {
     font-family: Menlo, Consolas, Monaco;
-    background-color: #fdf6e3;
-    color: #657b83;
+    background-color: #80959e;
+    color: #fff;
     padding: 1em;
+    font-size: 120%;
     text-align: left;
     word-break: break-word;
+    @media #{$mq-sm} {
+        font-size: 100%;
+    }
 }
 
 .social-buttons {
@@ -216,7 +227,5 @@ pre {
 // footer
 
 .l-footer {
-    background-color: #f8f8f8;
-    text-align: left;
     color: $light;
 }

@@ -6,12 +6,14 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var ejs = require("gulp-ejs");
+var plumber = require("gulp-plumber");
 
-// sass
+// Sass
 
 gulp.task('sass', function () {
     gulp.src('sass/**/*.scss')
-        .pipe(sass({errLogToConsole: true})) // コンパイルエラーが起きてもgulpを止めない
+        .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
                 browsers: ['last 2 versions']
@@ -21,17 +23,17 @@ gulp.task('sass', function () {
         .pipe(reload({stream:true}));
 });
 
-// js-concat-uglify
+// Js-concat-uglify
 
 gulp.task('js', function() {
     gulp.src(['js/*.js'])
         .pipe(concat('scripts.js'))
-        .pipe(uglify({preserveComments: 'some'})) // 一部コメントは残す
+        .pipe(uglify({preserveComments: 'some'})) // Keep some comments
         .pipe(gulp.dest('build/js'))
         .pipe(reload({stream:true}));
 });
 
-// imagemin
+// Imagemin
 
 gulp.task('imagemin', function() {
     gulp.src(['images/**/*.{png,jpg,gif,svg}'])
@@ -39,27 +41,40 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('build/images'));
 });
 
+// ejs
+
+var fs = require('fs');
+var json = JSON.parse(fs.readFileSync("site.json")); // parse json
+gulp.task("ejs", function() {
+    gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
+        .pipe(plumber())
+        .pipe(ejs(json))
+        .pipe(gulp.dest('./'))
+});
+
 // Static server
 
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./"
+            baseDir: "./", //　Target directory
+            index  : "index.html" // index file
         }
     });
 });
 
-// Reload all Browsers
+// Reload all browsers
 
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-// gulp コマンドでなにやるか指定
+// Task for `gulp` command
 
 gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
     gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("*.html", ['bs-reload']);
+    gulp.watch("./*.html", ['bs-reload']);
+    gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
 });
