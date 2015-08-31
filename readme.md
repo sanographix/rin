@@ -80,7 +80,12 @@ Example:
 	%>
 	<head>
 		<title><%= pageTitle %> - <%= siteName %></title>
-		<
+	</head>
+
+### Result
+	
+	<head>
+		<title>Toppage - Example Site</title>
 	</head>
 
 # Images
