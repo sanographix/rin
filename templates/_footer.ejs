@@ -11,45 +11,5 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <script>
-    // Facebookの反応（いいねとシェアの数）を取得
-    function get_social_count_facebook(url, counterId) {
-      $.ajax({
-        url:'https://graph.facebook.com/',
-        dataType:'jsonp',
-        data:{
-          id:url
-        },
-        success:function(res){
-          $('#' + counterId + ' .count').text( res.shares || 0 );
-        },
-        error:function(){
-          $('#' + counterId + ' .count').text('');
-        }
-      });
-    }
-    // Twitterの反応（ツイートやリツイート数）を取得
-    function get_social_count_twitter(url, counterId) {
-      $.ajax({
-        url:'http://urls.api.twitter.com/1/urls/count.json',
-        dataType:'jsonp',
-        data:{
-          url:url
-        },
-        success:function(res){
-          $('#' + counterId + ' .count').text( res.count || 0 );
-        },
-        error:function(){
-          $('#' + counterId + ' .count').text('');
-        }
-      });
-    }
-    $(function(){
-      get_social_count_facebook( location.href, "socialarea_facebook");
-      get_social_count_twitter( location.href, "socialarea_twitter");
-    });
-  </script>
-
-
 </body>
 </html>
