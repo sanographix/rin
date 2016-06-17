@@ -13,7 +13,7 @@ var plumber = require("gulp-plumber");
 
 gulp.task('sass', function () {
     gulp.src('sass/**/*.scss')
-        .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
+        .pipe(sass().on('error', sass.logError)) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
                 browsers: ['last 2 versions']
