@@ -48,7 +48,7 @@ var json = JSON.parse(fs.readFileSync("site.json")); // parse json
 gulp.task("ejs", function() {
     gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
         .pipe(plumber())
-        .pipe(ejs(json))
+        .pipe(ejs(json, {"ext": ".html"}))
         .pipe(gulp.dest('./'))
 });
 
