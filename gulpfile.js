@@ -13,7 +13,7 @@ var plumber = require("gulp-plumber");
 
 gulp.task('sass', function () {
     gulp.src('sass/**/*.scss')
-        .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
+        .pipe(sass().on('error', sass.logError)) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
                 browsers: ['last 2 versions']
@@ -48,8 +48,8 @@ var json = JSON.parse(fs.readFileSync("site.json")); // parse json
 gulp.task("ejs", function() {
     gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
         .pipe(plumber())
-        .pipe(ejs(json))
-        .pipe(gulp.dest('./'))
+        .pipe(ejs(json, {"ext": ".html"}))
+        .pipe(gulp.dest('build'))
 });
 
 // Static server
@@ -57,7 +57,7 @@ gulp.task("ejs", function() {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./", //　Target directory
+            baseDir: "build/", //　Target directory
             index  : "index.html" // index file
         }
     });
@@ -74,7 +74,7 @@ gulp.task('bs-reload', function () {
 gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
-    gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("./*.html", ['bs-reload']);
+    gulp.watch('images/**',['imagemin']);
+    gulp.watch("build/*.html", ['bs-reload']);
     gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
 });

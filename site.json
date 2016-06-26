@@ -1,7 +1,7 @@
 {
   "siteName": "Rin 4 - A lean, gulp-based HTML and SASS boilerplate by sanographix",
   "siteRootUrl": "http://sanographix.github.io/rin/",
-  "ogImageUrl": "http://sanographix.github.io/rin/build/images/og-image.jpg",
+  "ogImageUrl": "http://sanographix.github.io/rin/images/og-image.jpg",
   "fbAppId": "547137951989818",
   "twitterSite": "@sanographix",
   "googleAnalyticsId": "UA-36621684-1"
