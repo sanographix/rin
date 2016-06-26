@@ -49,7 +49,7 @@ gulp.task("ejs", function() {
     gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
         .pipe(plumber())
         .pipe(ejs(json, {"ext": ".html"}))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('build'))
 });
 
 // Static server
@@ -57,7 +57,7 @@ gulp.task("ejs", function() {
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: "./", //　Target directory
+            baseDir: "build/", //　Target directory
             index  : "index.html" // index file
         }
     });
@@ -74,7 +74,7 @@ gulp.task('bs-reload', function () {
 gulp.task('default',['browser-sync'], function() {
     gulp.watch('sass/**/*.scss',['sass']);
     gulp.watch('js/*.js',['js']);
-    gulp.watch('images/**/*.{png,jpg,gif,svg}',['imagemin']);
-    gulp.watch("./*.html", ['bs-reload']);
+    gulp.watch('images/**',['imagemin']);
+    gulp.watch("build/*.html", ['bs-reload']);
     gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
 });
