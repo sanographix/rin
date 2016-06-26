@@ -218,6 +218,15 @@ js files under `js/` will output to `build/js/scripts.js` with concatenated and 
 
 Rin runs local server by using [BrowserSync](http://www.browsersync.io/). Its default URL is <http://localhost:3000/>. It reloads your browser automatically when you update a file that gulp is watching.
 
+# Deploy to gh-pages branch
+
+Run `git subtree` command.
+
+```
+git subtree push --prefix build/ origin gh-pages
+```
+- [Deploy to `gh-pages` from a `dist` folder on the master branch. Useful for use with yeoman](https://gist.github.com/cobyism/4730490)
+
 # Author
 
 ### Showkaku Sano (sanographix)
