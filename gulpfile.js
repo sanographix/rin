@@ -13,7 +13,7 @@ var plumber = require("gulp-plumber");
 
 gulp.task('sass', function () {
     gulp.src('sass/**/*.scss')
-        .pipe(sass({errLogToConsole: true})) // Keep running gulp even though occurred compile error
+        .pipe(sass().on('error', sass.logError)) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
                 browsers: ['last 2 versions']
@@ -48,7 +48,7 @@ var json = JSON.parse(fs.readFileSync("site.json")); // parse json
 gulp.task("ejs", function() {
     gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
         .pipe(plumber())
-        .pipe(ejs(json))
+        .pipe(ejs(json, {"ext": ".html"}))
         .pipe(gulp.dest('./'))
 });
 
