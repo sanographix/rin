@@ -1,1 +1,1 @@
-$(document).ready(function(){$("a").each(function(){var n=this;n.origin!==location.origin&&$(n).attr("target","_blank")})});
+!function(){for(var t=document.querySelectorAll("a"),e=0;e<t.length;e++)t[e].origin!==location.origin&&t[e].setAttribute("target","_blank")}();
