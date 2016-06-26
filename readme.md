@@ -240,7 +240,6 @@ Graphic designer from Kyoto.
 
 ### Major components:
 
-* jQuery: MIT/GPL license
 * Normalize.css: Public Domain
 * html5shiv: MIT/GPL license
 * gulp: MIT license
