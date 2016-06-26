@@ -10,7 +10,7 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 - Node.js
     - <http://nodejs.org/>
-    - v0.12.x is recommended.
+    - v4.4.x is recommended.
 
 ## Set Up
 
@@ -38,7 +38,7 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 While you are running Rin, It is watching directories under `templates/`, `sass/`, `js/`, `images/`. Put your project’s templates(ejs), scss, js, images files in it.
 
-`sass/`, `js/`, `images/` files will compile and output to `build/`.
+`templates/`, `sass/`, `js/`, `images/` files will compile and output to `build/`.
 
 	rin/
 	┣┳ templates/
@@ -46,16 +46,15 @@ While you are running Rin, It is watching directories under `templates/`, `sass/
 	┃┣ js/
 	┃┗ images/
 	┃
-	┣ index.html
-	┃
 	┗┳ build/
-	 ┗┳ css/
+	 ┗┳ index.html
+	  ┣ css/
 	  ┣ js/
 	  ┗ images/
 
 # Templates
 
-Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save `.ejs` files under `templates/` directory, they will output as `.html` to root directory.
+Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save `.ejs` files under `templates/` directory, they will output as `.html` to `build/` directory.
 
 ## Template tags
 
@@ -66,7 +65,12 @@ Put variables which use for every pages.
 Example:	
 	
 	{
-	  "siteName": "Example Site"
+	  "siteName": "Example Site",
+     "siteRootUrl": "http://example.com/",
+     "ogImageUrl": "http://example.com/images/og-image.jpg",
+     "fbAppId": "000000000",
+     "twitterSite": "@sanographix",
+     "googleAnalyticsId": "UA-00000000-1"
 	}
 
 ### index.ejs
@@ -77,15 +81,18 @@ Example:
 	
 	<% var
 	pageTitle = "Toppage";
+	pageDescription = "Example site";
 	%>
 	<head>
 		<title><%= pageTitle %> - <%= siteName %></title>
+		<meta property="og:description" content="<%= pageDescription %>" />
 	</head>
 
 ### Result
 	
 	<head>
 		<title>Toppage - Example Site</title>
+		<meta property="og:description" content="Example site" />
 	</head>
 
 # Images
