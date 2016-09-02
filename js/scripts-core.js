@@ -2,7 +2,7 @@
 (function() {
   var a = document.querySelectorAll('a');
   for (var i = 0; i < a.length; i++) {
-    if (a[i].origin !== location.origin) {
+    if (a[i].host !== location.host) {
       a[i].setAttribute('target', '_blank');
     }
   }
