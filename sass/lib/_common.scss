@@ -20,13 +20,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 // mixin
 @mixin clearfix() {
-    *zoom: 1;
-    &:before,
     &:after {
-        display: table;
         content: " ";
-    }
-    &:after {
+        display: block;
         clear: both;
     }
 }
