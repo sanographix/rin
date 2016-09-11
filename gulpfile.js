@@ -4,6 +4,7 @@ var pleeease = require('gulp-pleeease');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var ejs = require("gulp-ejs");
@@ -37,7 +38,13 @@ gulp.task('js', function() {
 
 gulp.task('imagemin', function() {
     gulp.src(['images/**/*.{png,jpg,gif,svg}'])
-        .pipe(imagemin({optimizationLevel: 7}))
+        .pipe(imagemin({
+            optimizationLevel: 7,
+            use: [pngquant({
+                quality: '60-80',
+                speed: 1
+            })]
+        }))
         .pipe(gulp.dest('build/images'));
 });
 
