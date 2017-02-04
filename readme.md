@@ -165,27 +165,30 @@ Color variables and breakpoints of browser window width.
 
 ### Media queries breakpoints
 
-- `mq-lg`
-    - Large display (>1240px)
-- `mq-md`
-    - Tablet display (<1024px)
-- `mq-sm`
-    - Small tablet & Smartphone (<767px)
 - `mq-xs`
     - Smartphone (<480px)
+- `mq-sm`
+    - Tablet (>768px)
+- `mq-md`
+    - Medium desktop display (>992px)
+- `mq-lg`
+    - Large desktop display (>1200px)
 
 #### Example:
 
     header h1 {
-        font-size: 200%;
-        @media #{$mq-lg} {
-            font-size: 300%;
-        }
-        @media #{$mq-sm} {
-            font-size: 100%;
-        }
+        font-size: 100%;
         @media #{$mq-xs} {
             font-size: 80%;
+        }
+        @media #{$mq-sm} {
+            font-size: 150%;
+        }
+        @media #{$mq-md} {
+            font-size: 200%;
+        }
+        @media #{$mq-lg} {
+            font-size: 300%;
         }
     }
 
