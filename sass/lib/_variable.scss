@@ -13,13 +13,10 @@ $border: #ddd; // Border color
 
 // Media Queries - Breakpoints
 
-$mq-lg: "(min-width: 1240px)"; // Media queries - Large display
-
-$mq-md: "(max-width: 1024px)"; // Media Queries - Tablet
-
-$mq-sm: "(max-width: 767px)"; // Media Queries - Small tablet & smartphone
-
 $mq-xs: "(max-width: 480px)"; // Media Queries - Smartphone
+$mq-sm: "(min-width: 768px)"; // Media Queries - Small tablet & smartphone
+$mq-md: "(min-width: 992px)"; // Media Queries - Tablet
+$mq-lg: "(min-width: 1200px)"; // Media queries - Large display
 
 
 // Media Queries - Retina display
