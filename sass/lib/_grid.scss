@@ -16,55 +16,59 @@
     }
 }
 .l-row {
-    @include clearfix();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     @media #{$mq-sm} {
+        flex-direction: row;
         margin-left: -15px;
         margin-right: -15px;
     }
 }
+
 [class*="l-span"] {
     margin-bottom: 1em;
     @media #{$mq-sm} {
-        float: left;
         padding-right: 15px;
         padding-left: 15px;
-        min-height: 1px;
+        flex: 0 0 auto;
         box-sizing: border-box;
-        margin-bottom: 0;
+        margin-bottom: auto;
     }
 }
+
 @media #{$mq-sm} {
     .l-span1 {
-        width: 8.33333333%;
+        flex-basis: 8.33333333%;
     }
     .l-span2 {
-        width: 16.66666667%;
+        flex-basis: 16.66666667%;
     }
     .l-span3 {
-        width: 25%;
+        flex-basis: 25%;
     }
     .l-span4 {
-        width: 33.33333333%;
+        flex-basis: 33.33333333%;
     }
     .l-span5 {
-        width: 41.66666667%;
+        flex-basis: 41.66666667%;
     }
     .l-span6 {
-        width: 50%;
+        flex-basis: 50%;
     }
     .l-span7 {
-        width:58.33333333%
+        flex-basis: 58.33333333%
     }
     .l-span8 {
-        width: 66.66666667%;
+        flex-basis: 66.66666667%;
     }
     .l-span9 {
-        width:75%
+        flex-basis: 75%
     }
     .l-span10 {
-        width:83.33333333%
+        flex-basis: 83.33333333%
     }
     .l-span11 {
-        width:91.66666667%
+        flex-basis: 91.66666667%
     }
 }
