@@ -31,7 +31,7 @@
     @media #{$mq-sm} {
         padding-right: 15px;
         padding-left: 15px;
-        flex: 0 0 auto;
+        flex: 0 1 auto;
         box-sizing: border-box;
         margin-bottom: auto;
     }
@@ -40,7 +40,7 @@
 @media #{$mq-sm} {
     @for $i from 1 through 12 {
         .l-span#{$i} {
-            flex: $i 1 0;
+            flex: $i 1 calc(#{$i / 12 * 100%});
         }
     }
 }
