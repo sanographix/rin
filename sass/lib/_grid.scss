@@ -40,7 +40,8 @@
 @media #{$mq-sm} {
     @for $i from 1 through 12 {
         .l-span#{$i} {
-            flex: $i 1 calc(#{$i / 12 * 100%});
+            flex: $i 1 #{$i / 12 * 100%};
+            max-width: #{$i / 12 * 100%};
         }
     }
 }
