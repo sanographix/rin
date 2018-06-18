@@ -8,15 +8,17 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
-    "scss": "node-sass assets/scss/style.scss build/css/style.css --output-style compressed --indent-width 4 --source-map build/css/",
+    "scss": "node-sass src/scss/style.scss build/css/style.css --output-style compressed --indent-width 4 --source-map build/css/",
     "autoprefixer": "postcss --use autoprefixer -r build/css/style.css",
+    "ejs": "ejs-cli --base-dir src/templates/ --file '**/**.ejs' --out build/ --options site.json",
     "server": "browser-sync start -c bs-config.js",
-    "build": "npm run build:css & npm run build:js",
+    "build": "npm run build:css & npm run build:js & npm run ejs",
     "build:css": "npm-run-all scss autoprefixer",
-    "build:js": "uglifyjs assets/js/script-core.js --compress -o build/js/scripts.js",
-    "watch": "npm run watch:css & npm run watch:js",
-    "watch:css": "chokidar 'assets/scss/' -c 'npm run build:css'",
-    "watch:js": "chokidar 'assets/scss/' -c 'npm run build:js'"
+    "build:js": "uglifyjs src/js/script-core.js --compress -o build/js/scripts.js",
+    "watch": "npm run watch:css & npm run watch:js & npm run watch:ejs",
+    "watch:css": "chokidar 'src/scss/' -c 'npm run build:css'",
+    "watch:js": "chokidar 'src/scss/' -c 'npm run build:js'",
+    "watch:ejs": "chokidar 'src/templates/' -c 'npm run ejs'"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
