@@ -1,23 +1,33 @@
 {
   "name": "rin",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "A Lean HTML & SASS Boilerplate",
   "author": "sanographix",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanographix/rin"
+  "repository": "git@github.com:sanographix/rin.git",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "npm-run-all -p watch server",
+    "scss": "node-sass assets/scss/style.scss build/css/style.css --output-style compressed --indent-width 4 --source-map build/css/",
+    "autoprefixer": "postcss --use autoprefixer -r build/css/style.css",
+    "server": "browser-sync start -c bs-config.js",
+    "build": "npm run build:css & npm run build:js",
+    "build:css": "npm-run-all scss autoprefixer",
+    "build:js": "uglifyjs assets/js/script-core.js --compress -o build/js/scripts.js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "watch:css": "chokidar 'assets/scss/' -c 'npm run build:css'",
+    "watch:js": "chokidar 'assets/scss/' -c 'npm run build:js'"
   },
   "devDependencies": {
-    "browser-sync": "^2.14.2",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-ejs": "^2.2.0",
-    "gulp-imagemin": "^3.0.3",
-    "imagemin-pngquant": "^5.0.0",
-    "gulp-pleeease": "^2.0.2",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.0"
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
+    "chokidar-cli": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.3.5",
+    "ejs-cli": "^2.0.0"
   }
 }
