@@ -10,7 +10,7 @@
     "start": "npm-run-all -p watch server",
     "scss": "node-sass src/scss/style.scss build/css/style.css --output-style compressed --indent-width 4 --source-map build/css/",
     "autoprefixer": "postcss --use autoprefixer -r build/css/style.css",
-    "ejs": "ejs-cli --base-dir src/templates/ --file '**/**.ejs' --out build/ --options site.json",
+    "ejs": "ejs-cli --base-dir src/templates/pages --file '**/**.ejs' --out build/ --options site.json",
     "server": "browser-sync start -c bs-config.js",
     "build": "npm run build:css & npm run build:js & npm run ejs",
     "build:css": "npm-run-all scss autoprefixer",
