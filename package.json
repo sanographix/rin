@@ -12,13 +12,16 @@
     "autoprefixer": "postcss --use autoprefixer -r build/css/style.css",
     "ejs": "ejs-cli --base-dir src/templates/pages --file '**/**.ejs' --out build/ --options site.json",
     "server": "browser-sync start -c bs-config.js",
-    "build": "npm run build:css & npm run build:js & npm run ejs",
+    "clean": "rimraf build/{css/*,js/*,images/*}",
+    "build": "npm run clean & npm-run-all -p build:* & npm run ejs",
     "build:css": "npm-run-all scss autoprefixer",
     "build:js": "uglifyjs src/js/script-core.js --compress -o build/js/scripts.js",
-    "watch": "npm run watch:css & npm run watch:js & npm run watch:ejs",
+    "build:images": "imagemin src/images/* -o build/images",
+    "watch": "npm-run-all -p watch:*",
     "watch:css": "chokidar 'src/scss/' -c 'npm run build:css'",
     "watch:js": "chokidar 'src/js/' -c 'npm run build:js'",
-    "watch:ejs": "chokidar 'src/templates/' -c 'npm run ejs'"
+    "watch:ejs": "chokidar 'src/templates/' -c 'npm run ejs'",
+    "watch:images": "chokidar 'src/images/' -i '**/*.DS_Store' -c 'npm run build:images'"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.3",
@@ -30,6 +33,7 @@
     "postcss-cli": "^5.0.1",
     "rimraf": "^2.6.2",
     "uglify-js": "^3.4.0",
-    "ejs-cli": "^2.0.1"
+    "ejs-cli": "^2.0.1",
+    "imagemin-cli": "^3.0.0"
   }
 }
