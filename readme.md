@@ -1,8 +1,8 @@
-# Rin 4
+# Rin 5
 
-A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
+A lean HTML & SASS boilerplate for better front-end coding
 
-<http://sanographix.github.io/rin/>
+<https://sanographix.github.io/rin/>
 
 # Getting Started
 
@@ -10,25 +10,18 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 - Node.js
     - <http://nodejs.org/>
-    - v4.4.x is recommended.
 
 ## Set Up
 
-#### 1) Install gulp:
-
-*Note:* If you have already installed gulp, skip this section.
-
-    $ npm install -g gulp
-
-#### 2) Clone Rin:
+#### 1) Clone Rin:
 
     $ git clone git@github.com:sanographix/rin.git test-repo
     $ cd test-repo
     $ npm install
 
-#### 3) Run gulp:
+#### 3) Run rin:
 
-    $ gulp
+    $ npm start
 
 #### 4) :tada:
 
@@ -36,13 +29,14 @@ A lean, gulp-based HTML & SASS boilerplate for better front-end coding.
 
 # Directory
 
-While you are running Rin, It is watching directories under `templates/`, `sass/`, `js/`, `images/`. Put your project’s templates(ejs), scss, js, images files in it.
+While you are running Rin, It is watching directories under `src/`. Put your project’s templates(ejs), scss, js, images files in it.
 
-`templates/`, `sass/`, `js/`, `images/` files will compile and output to `build/`.
+`templates/`, `scss/`, `js/`, `images/` files will compile and output to `build/`.
 
 	rin/
-	┣┳ templates/
-	┃┣ sass/
+	┣┳ src/
+	┃┣ templates/
+	┃┣ scss/
 	┃┣ js/
 	┃┗ images/
 	┃
@@ -54,7 +48,7 @@ While you are running Rin, It is watching directories under `templates/`, `sass/
 
 # Templates
 
-Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save `.ejs` files under `templates/` directory, they will output as `.html` to `build/` directory.
+Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save `.ejs` files under `src/templates/pages`, they will output as `.html` to `build/` directory.
 
 ## Template tags
 
@@ -62,23 +56,23 @@ Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save 
 
 Put variables which use for every pages.
 
-Example:	
-	
+Example:
+
 	{
 	  "siteName": "Example Site",
-     "siteRootUrl": "http://example.com/",
-     "ogImageUrl": "http://example.com/images/og-image.jpg",
-     "fbAppId": "000000000",
-     "twitterSite": "@sanographix",
-     "googleAnalyticsId": "UA-00000000-1"
+      "siteRootUrl": "http://example.com/",
+      "ogImageUrl": "http://example.com/images/og-image.jpg",
+      "fbAppId": "000000000",
+      "twitterSite": "@sanographix",
+      "googleAnalyticsId": "UA-00000000-1"
 	}
 
 ### index.ejs
 
-If you want to use variables for particular single page, put variables into `<% var %>` at each page.
+To use variables for particular single page, put variables into `<% var %>` at each page.
 
-Example:
-	
+#### Example:
+
 	<% var
 	pageTitle = "Toppage";
 	pageDescription = "Example site";
@@ -88,8 +82,8 @@ Example:
 		<meta property="og:description" content="<%= pageDescription %>" />
 	</head>
 
-### Result
-	
+#### Result:
+
 	<head>
 		<title>Toppage - Example Site</title>
 		<meta property="og:description" content="Example site" />
@@ -97,7 +91,7 @@ Example:
 
 # Images
 
-Rin optimizes gif, jpg, png, svg images automatically using [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin). Each files will output to `build/`.
+Rin optimizes gif, jpg, png, svg images automatically using [imagemin](https://www.npmjs.com/package/imagemin-cli). Each files will output to `build/images/`.
 
 # CSS
 
@@ -115,7 +109,7 @@ Rin supports scss.
 
 ## _normalize.scss
 
- -> [normalize.css](http://necolas.github.io/normalize.css/)
+ -> [normalize.css](https://necolas.github.io/normalize.css/)
 
 ## _grid.scss
 
@@ -215,11 +209,11 @@ Variables for retina devices.
 
 # JS
 
-js files under `js/` will output to `build/js/scripts.js` with concatenated and compressed.
+js files under `src/js/` will output to `build/js/scripts.js` with concatenated and compressed.
 
 # Local Server
 
-Rin runs local server by using [BrowserSync](http://www.browsersync.io/). Its default URL is <http://localhost:3000/>. It reloads your browser automatically when you update a file that gulp is watching.
+Rin runs local server by using [BrowserSync](https://www.browsersync.io/). Its default URL is <http://localhost:3000/>. It reloads your browser automatically when you update a file.
 
 # Deploy to gh-pages branch
 
@@ -236,13 +230,9 @@ git subtree push --prefix build/ origin gh-pages
 
 Graphic designer from Kyoto.
 
-- <http://www.sanographix.net/>
-- Twitter: [@sanographix](http://twitter.com/sanographix/)
+- <https://sanographix.net/>
+- Twitter: [@sanographix](https://twitter.com/sanographix/)
 
 # License
 
-### Major components:
-
-* Normalize.css: Public Domain
-* html5shiv: MIT/GPL license
-* gulp: MIT license
+MIT
