@@ -8,9 +8,9 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "npm-run-all -p watch server",
-    "scss": "node-sass src/scss/style.scss build/css/style.css --output-style compressed --indent-width 4 --source-map build/css/",
+    "scss": "node-sass src/scss/style.scss build/css/style.css --output-style compressed --indent-width 4 --source-map build/css/ --importer node_modules/node-sass-globbing/index.js",
     "autoprefixer": "postcss --use autoprefixer -r build/css/style.css",
-    "ejs": "ejs-cli --base-dir src/templates/pages --file '**/**.ejs' --out build/ --options site.json",
+    "ejs": "ejs-cli --base-dir src/templates/pages/ --file '**/**.ejs' --out build/ --options site.json",
     "server": "browser-sync start -c bs-config.js",
     "clean": "rimraf build/{css/*,js/*,images/*}",
     "build": "npm run clean & npm-run-all -p build:* & npm run ejs",
@@ -27,13 +27,14 @@
     "autoprefixer": "^8.6.3",
     "browser-sync": "^2.24.4",
     "chokidar-cli": "^1.2.0",
+    "ejs-cli": "^2.0.1",
+    "imagemin-cli": "^3.0.0",
     "node-sass": "^4.9.0",
+    "node-sass-globbing": "0.0.23",
     "normalize.css": "^8.0.0",
     "npm-run-all": "^4.1.3",
     "postcss-cli": "^5.0.1",
     "rimraf": "^2.6.2",
-    "uglify-js": "^3.4.0",
-    "ejs-cli": "^2.0.1",
-    "imagemin-cli": "^3.0.0"
+    "uglify-js": "^3.4.0"
   }
 }

@@ -1,6 +1,7 @@
 @import "node_modules/normalize.css/normalize";
-@import "lib/variable";
-@import "lib/button";
-@import "lib/common";
-@import "lib/grid";
-@import "lib/core";
+@import "globals/_variable";
+@import "globals/_common";
+
+@import "components/**/*.scss";
+
+@import "pages/**/*.scss";
