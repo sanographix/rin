@@ -2,11 +2,10 @@
 .btn {
     display: inline-block;
     text-align: center;
-    padding: .6em 1.2em;
+    padding: .6rem 1rem;
     cursor: pointer;
     line-height: 1.5;
-    font-size: 90%;
-    border-radius: .25em;
+    font-size: .85rem;
     overflow: hidden;
     color: $link;
     background-color: transparent;
@@ -17,31 +16,27 @@
         background-color: $link;
         color: #fff;
         text-decoration: none;
-        border-color: $link;
+        border-color: transparent;
     }
 }
 .btn-light {
-    border-color: $light;
-    color: $base;
+    border-color: darken($border, 8%);
+    color: $text-light;
     &:hover {
-        background-color: $base;
-        border-color: $base;
+        background-color: $text-light;
+        border-color: transparent;
         color: #fff;
     }
 }
 .btn-primary {
     background-color: $link;
     color: #fff;
-    border-color: $link;
     &:hover {
         background-color: $hover;
         color: #fff;
-        border-color: $hover;
     }
 }
-.btn-large {
-    padding: .7em 2em;
-    font-size: 120%;
-    box-sizing: border-box;
-    border-width: 2px;
+.btn-lg {
+    padding: .8em 2em;
+    font-size: 1.1rem;
 }

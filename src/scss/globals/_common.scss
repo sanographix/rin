@@ -1,8 +1,11 @@
 // Common
+* {
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $font;
     background: $bg;
-    color: $base;
+    color: $text;
 }
 a {
     color: $link;
@@ -13,7 +16,7 @@ a {
 }
 h1,h2,h3,h4,h5,h6 {
     a,a:hover {
-        color: $base;
+        color: $text-header;
         text-decoration: none;
     }
 }
