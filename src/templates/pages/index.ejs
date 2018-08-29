@@ -2,8 +2,52 @@
 pageTitle = "Toppage";
 pageId = "index";
 pageUrl = "";
-pageDescription = "Awesome site";
+pageDescription = "A lean HTML & SASS boilerplate for better front-end coding";
 %>
 <% include ../_partial/_header %>
+
+<header class="hero">
+  <nav class="globalHeader">
+    <div class="l-container">
+      <div class="globalHeader-row">
+        <div class="globalHeader-left">
+          <a class="navbar-brand" href="https://sanographix.net/">SANOGRAPHIX</a>
+        </div>
+        <div class="globalHeader-right">
+          <ul class="navbar-ul">
+            <li>
+              <a href="http://sanographix.github.com/rin/">
+                Docs
+              </a>
+            </li>
+            <li>
+              <a href="#share">
+                Share
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="hero-inner">
+    <div class="l-container">
+      <h1>Rin <span class="bold">5</span></h1>
+      <h2>A lean HTML &amp; SASS boilerplate<br>for better front-end coding</h2>
+      <div class="btn-wrapper">
+        <a href="https://github.com/sanographix/rin/" class="btn btn-wh btn-lg">Try it now</a>
+      </div>
+      <aside class="hero-aside">
+        <span class="version">Version 5.0</span>
+        <br>
+        Created &amp; Maintained by <a href="https://sanographix.net/">@sanographix</a>
+      </aside>
+
+
+    </div>
+
+  </div>
+</header>
+
 
 <% include ../_partial/_footer %>

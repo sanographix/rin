@@ -1,0 +1,42 @@
+.hero {
+    background: $link;
+    text-align: center;
+    color: $bg;
+    h1 {
+        font-size: 3rem;
+        font-weight: normal;
+        margin: 0 0 .5rem;
+        @media #{$mq-md} {
+            font-size: 5rem;
+        }
+    }
+    h2 {
+        font-size: 1.3rem;
+        margin: .5rem auto;
+        font-weight: normal;
+        @media #{$mq-md} {
+            font-size: 1.8rem;
+        }
+    }
+    .btn-wrapper {
+        margin: 2rem auto;
+        text-transform: uppercase;
+        @media #{$mq-md} {
+            margin: 3rem auto;
+        }
+    }
+}
+.hero-inner {
+    @include section();
+}
+.hero-aside {
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    .version {
+        opacity: .7;
+    }
+    a {
+        color: $bg;
+    }
+}

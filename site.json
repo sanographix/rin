@@ -1,8 +1,8 @@
 {
-  "siteName": "Example Site",
-  "siteRootUrl": "https://example.com/",
-  "ogImageUrl": "https://example.com/images/og-image.jpg",
-  "fbAppId": "",
-  "twitterSite": "",
-  "googleAnalyticsId": ""
+  "siteName": "Rin 5 - A lean HTML & SASS boilerplate by sanographix",
+  "siteRootUrl": "https://sanographix.github.io/rin/",
+  "ogImageUrl": "https://sanographix.github.io/rin/images/og-image.jpg",
+  "fbAppId": "547137951989818",
+  "twitterSite": "@sanographix",
+  "googleAnalyticsId": "UA-36621684-1"
 }

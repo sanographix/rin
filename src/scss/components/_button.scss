@@ -36,6 +36,15 @@
         color: #fff;
     }
 }
+.btn-wh {
+    background-color: $bg;
+    color: $link;
+    &:hover {
+        background-color: transparent;
+        border-color: $bg;
+        color: $bg;
+    }
+}
 .btn-lg {
     padding: .8em 2em;
     font-size: 1.1rem;
