@@ -1,0 +1,7 @@
+.footer {
+    @include section();
+    background: $bg-light;
+    text-align: center;
+    font-size: .9rem;
+    color: $text-light;
+}

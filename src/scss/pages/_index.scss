@@ -1,1 +1,42 @@
 // index page
+
+.section-features {
+    @include section();
+    .l-row {
+        justify-content: center;
+        text-align: center;
+        @media #{$mq-md} {
+            margin-bottom: 2rem;
+        }
+    }
+    h4 {
+        font-weight: normal;
+        margin-top: 0;
+    }
+}
+
+.section-started {
+    @include section();
+    pre {
+        font-family: Menlo,Consolas,Monaco;
+        background-color: $text;
+        color: $bg;
+        padding: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.3;
+        text-align: left;
+        word-break: break-word;
+        overflow: auto;
+    }
+    .btn-wrapper {
+        text-align: center;
+    }
+}
+
+.section-share {
+    @include section();
+}
+
+.section-built {
+    @include section();
+}

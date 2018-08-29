@@ -2,15 +2,18 @@
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    font-size: .9rem;
+    font-size: .8rem;
     @media #{$mq-md} {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     a {
         color: $bg;
         display: inline-block;
-        padding: 1rem;
+        padding: 1rem .5rem;
         text-decoration: none;
+        @media #{$mq-md} {
+            padding: 1rem;
+        }
         &:hover {
             text-decoration: underline;
         }

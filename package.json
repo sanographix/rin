@@ -17,13 +17,13 @@
     "build:css": "npm-run-all scss autoprefixer",
     "build:js": "uglifyjs src/js/script-core.js --compress -o build/js/scripts.js",
     "build:images": "imagemin src/images/* -o build/images",
-    "build:fonts": "cpx \"./src/**/{*.ttf,*.woff,*.woff2}\" ./build",
+    "build:assets": "cpx \"./src/**/{*.ttf,*.woff,*.woff2,*.ico}\" ./build",
     "watch": "npm-run-all -p watch:*",
     "watch:css": "chokidar 'src/scss/' -c 'npm run build:css'",
     "watch:js": "chokidar 'src/js/' -c 'npm run build:js'",
     "watch:ejs": "chokidar 'src/templates/' -c 'npm run ejs'",
     "watch:images": "chokidar 'src/images/' -i '**/*.DS_Store' -c 'npm run build:images'",
-    "watch:fonts": "chokidar 'src/fonts/' -c 'npm run build:fonts'"
+    "watch:assets": "chokidar 'src/assets/' -c 'npm run build:assets'"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.3",

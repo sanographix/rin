@@ -35,7 +35,7 @@
     }
 }
 
-@media #{$mq-sm} {
+@media #{$mq-md} {
     @for $i from 1 through 12 {
         .l-span#{$i} {
             flex: $i 1 #{$i / 12 * 100%};

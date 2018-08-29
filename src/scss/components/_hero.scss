@@ -6,16 +6,22 @@
         font-size: 3rem;
         font-weight: normal;
         margin: 0 0 .5rem;
+        color: $bg;
+        text-transform: uppercase;
         @media #{$mq-md} {
             font-size: 5rem;
         }
+        .bold {
+            font-weight: bold;
+        }
     }
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin: .5rem auto;
         font-weight: normal;
+        color: $bg;
         @media #{$mq-md} {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
     }
     .btn-wrapper {
@@ -24,6 +30,9 @@
         @media #{$mq-md} {
             margin: 3rem auto;
         }
+        .btn {
+            min-width: 15rem;
+        }
     }
 }
 .hero-inner {
@@ -31,8 +40,8 @@
 }
 .hero-aside {
     text-transform: uppercase;
-    font-size: .7rem;
-    letter-spacing: .1rem;
+    font-size: .65rem;
+    letter-spacing: .05rem;
     .version {
         opacity: .7;
     }
