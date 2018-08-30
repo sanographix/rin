@@ -151,7 +151,7 @@ Example:
     <a class="btn">Normal button</a>
     <a class="btn btn-light">Light color button</a>
     <a class="btn btn-primary">Primary button!</a>
-    <a class="btn btn-large">Large button!!</a>
+    <a class="btn btn-lg">Large button!!</a>
 
 ## _variable.scss
 
@@ -162,11 +162,15 @@ Color variables and breakpoints of browser window width.
 - `mq-xs`
     - Smartphone (<480px)
 - `mq-sm`
-    - Tablet (>768px)
+    - Smartphone, Tablet (>576px)
 - `mq-md`
-    - Medium desktop display (>992px)
+    - Tablet (>768px)
 - `mq-lg`
+    - Medium desktop display (>992px)
+- `mq-xl`
     - Large desktop display (>1200px)
+- `mq-xxl`
+    - Extra large desktop display (>1600px)
 
 #### Example:
 
@@ -183,27 +187,6 @@ Color variables and breakpoints of browser window width.
         }
         @media #{$mq-lg} {
             font-size: 300%;
-        }
-    }
-
-### at2x
-
-Variables for retina devices.
-
-- `at2x`
-    - All retina devices
-- `at2x-tablet`
-    - Retina devices (larger than iPad display)
-- `at2x-pc`
-    - Retina devices larger than PC display (1025px)
-    - Use this variables when you need to load too large file size images.
-
-#### Example:
-
-    header h1 {
-        background: url("images/title.png");
-        @media #{$at2x} {
-            background: url("images/title@2x.png");
         }
     }
 
