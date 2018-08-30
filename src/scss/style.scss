@@ -1,0 +1,7 @@
+@import "node_modules/normalize.css/normalize";
+@import "globals/_variable";
+@import "globals/_common";
+
+@import "components/**/*.scss";
+
+@import "pages/**/*.scss";

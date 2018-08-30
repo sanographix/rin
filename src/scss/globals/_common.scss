@@ -1,0 +1,30 @@
+// Common
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: $font;
+    background: $bg;
+    color: $text;
+}
+a {
+    color: $link;
+    transition: all .2s;
+    &:hover {
+        color: $hover;
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    a,a:hover {
+        color: $text-header;
+        text-decoration: none;
+    }
+}
+// mixin
+@mixin clearfix() {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}

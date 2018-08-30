@@ -1,0 +1,47 @@
+// grid
+.l-container {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    @media #{$mq-sm} {
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media #{$mq-md} {
+        width: 940px;
+    }
+    @media #{$mq-lg} {
+        width: 1140px;
+    }
+}
+.l-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media #{$mq-sm} {
+        flex-direction: row;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+[class*="l-span"] {
+    margin-bottom: 1em;
+    @media #{$mq-sm} {
+        padding-right: 15px;
+        padding-left: 15px;
+        flex: 0 1 auto;
+        box-sizing: border-box;
+        margin-bottom: auto;
+    }
+}
+
+@media #{$mq-sm} {
+    @for $i from 1 through 12 {
+        .l-span#{$i} {
+            flex: $i 1 #{$i / 12 * 100%};
+            max-width: #{$i / 12 * 100%};
+        }
+    }
+}
