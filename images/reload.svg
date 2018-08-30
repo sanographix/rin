@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<g>
-	<polyline fill="none" stroke="#231F20" stroke-width="2" stroke-miterlimit="10" points="80.2,67.7 74.4,56.4 63,60.7 	"/>
-	<polyline fill="none" stroke="#231F20" stroke-width="2" stroke-miterlimit="10" points="19.6,31.1 24.9,42.3 36.4,39.1 	"/>
-	<path fill="none" stroke="#231F20" stroke-width="2" stroke-miterlimit="10" d="M24.9,42.3c3.2-10.7,13-18.5,24.6-18.5
-		c11.5,0,21.3,7.8,24.6,18.5"/>
-	<path fill="none" stroke="#231F20" stroke-width="2" stroke-miterlimit="10" d="M74.4,56.4c-2.8,11.4-12.9,19.9-24.9,19.9
-		c-12,0-22-8.3-24.9-19.6"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><style>.a,.b{fill:none}.a{stroke:#6162b7;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}</style></defs><title>reload</title><path class="a" d="M80.2 67.7l-5.8-11.3L63 60.7M19.6 31.1l5.3 11.2 11.5-3.2m-11.5 3.2a25.6 25.6 0 0 1 49.2-.1m.3 14.2a25.6 25.6 0 0 1-49.8.3"/><path class="b" d="M0 0h100v100H0z"/></svg>

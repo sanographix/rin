@@ -1,1 +1,0 @@
-$(document).ready(function(){$(window).on("load scroll",function(){$(window).scrollTop()>140?$(".js-globalheader").addClass("is-scrolled"):$(".js-globalheader").removeClass("is-scrolled")}),$("a").each(function(){var o=this;o.origin!==location.origin&&$(o).attr("target","_blank")})});
