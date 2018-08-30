@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width">
 
-  <meta property="og:title" content="<%= pageTitle %> - <%= siteName %>" />
+  <meta property="og:title" content="<% if (pageId != 'index') { %><%= pageTitle %> - <% } %><%= siteName %>" />
   <meta property="og:description" content="<%= pageDescription %>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%= siteRootUrl %><%= pageUrl %>" />
