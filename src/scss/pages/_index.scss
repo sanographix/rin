@@ -9,6 +9,9 @@
             margin-bottom: 2rem;
         }
     }
+    .row-secondary {
+        margin-bottom: 0;
+    }
     h4 {
         font-weight: normal;
         margin-top: 0;
@@ -33,10 +36,16 @@
     }
 }
 
-.section-share {
-    @include section();
-}
-
 .section-built {
     @include section();
+    .built-row {
+        text-align: center;
+        img {
+            max-width: 100%;
+            box-shadow: 0 .4em 2em rgba(0,0,0,.3);
+        }
+        h4 {
+            font-weight: normal;
+        }
+    }
 }
