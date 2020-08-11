@@ -15,7 +15,7 @@
     "clean": "rimraf build/{css/*,js/*,images/*}",
     "build": "npm run clean & npm-run-all -p build:* & npm run ejs",
     "build:css": "npm-run-all scss autoprefixer",
-    "build:js": "uglifyjs src/js/script-core.js --compress -o build/js/scripts.js",
+    "build:js": "uglifyjs src/js/* --compress -o build/js/scripts.js",
     "build:images": "imagemin src/images/* -o build/images",
     "watch": "npm-run-all -p watch:*",
     "watch:css": "onchange 'src/scss/' -- npm run build:css",
