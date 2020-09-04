@@ -28,7 +28,7 @@
     "browser-sync": "^2.24.7",
     "ejs-cli": "^2.0.1",
     "imagemin-cli": "^3.0.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "node-sass-globbing": "0.0.23",
     "normalize.css": "^8.0.0",
     "npm-run-all": "^4.1.3",
