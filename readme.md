@@ -1,4 +1,6 @@
-# Rin 5
+# Rin 5  
+
+Unique way of front - end coding
 
 A lean HTML & SASS boilerplate for better front-end coding
 
