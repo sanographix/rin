@@ -4,7 +4,7 @@ A lean HTML & SASS boilerplate for better front-end coding
 
 <https://sanographix.github.io/rin/>
 
-# Getting Started
+# Getting Started For Project
 
 ### Required Components
 
@@ -29,7 +29,7 @@ A lean HTML & SASS boilerplate for better front-end coding
 
 # Directory
 
-While you are running Rin, It is watching directories under `src/`. Put your project’s templates(ejs), scss, js, images files in it.
+While you are running Rin, It is watching directories under `src/`. Put your project’s templates(ejs), scss, js, images, files in it.
 
 `templates/`, `scss/`, `js/`, `images/` files will compile and output to `build/`.
 
@@ -211,7 +211,7 @@ git subtree push --prefix build/ origin gh-pages
 
 ### Showkaku Sano (sanographix)
 
-Graphic designer from Kyoto.
+Graphic designer from Kyoto (Japan).
 
 - <https://sanographix.net/>
 - Twitter: [@sanographix](https://twitter.com/sanographix/)
