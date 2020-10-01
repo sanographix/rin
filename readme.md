@@ -1,6 +1,6 @@
 # Rin 5
 
-A lean HTML & SASS boilerplate for better front-end coding
+A learn <strong>HTML & SASS</strong> boilerplate for better front-end coding
 
 <https://sanographix.github.io/rin/>
 
