@@ -54,7 +54,7 @@ Rin supports [EJS](http://www.embeddedjs.com/) template. When you edit and save 
 
 ### site.json
 
-Put variables which use for every pages.
+Put variables which are using by every pages.
 
 Example:
 
